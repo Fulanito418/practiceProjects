@@ -1,4 +1,3 @@
-console.log('checking for git status');
 console.log('Hello, testing');
 
 let arr1 = [10,20,20,-10];
