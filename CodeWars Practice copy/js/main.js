@@ -1,3 +1,5 @@
+console.log('Hello, testing');
+
 let arr1 = [10,20,20,-10];
 
 let initValue = 0;
