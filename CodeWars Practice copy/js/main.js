@@ -1,21 +1,42 @@
-console.log('Hello, testing');
+//Remove all the white space #########################
+const str = ' A   B   C    D ';
 
-let arr1 = [10,20,20,-10];
+const noWhitespace = str.replace(/\s/g, '');
+console.log(noWhitespace); // 👉️ 'ABCD'
 
-let initValue = 0;
+/*
+The \s metacharacter matches spaces, tabs and newlines.
+
+We use the g (global) flag to specify that we want to match all occurrences of whitespace characters in the string, not just the first occurrence.
+
+The second parameter the replace function takes is the replacement. In our case we want to replace all whitespace with an empty string (nothing).
+*/
+
+
+
+//Add all the positive values in an array #########################
+function positiveSum(arr) {
+  var total = 0;    
+  for (i = 0; i < arr.length; i++) {    // setup loop to go through array of given length
+    if (arr[i] > 0) {                   // if arr[i] is greater than zero
+      total += arr[i];                  // add arr[i] to total
+    }
+  }
+  return total;                         // return total
+}
+
 
 function positiveSum(arr) {
-  if (arr.length == 0){
-    return 0;
-    } else {
-      for(i=0; i<arr.length; i++){
-        initValue = initValue + arr[i];
-      }
+   return arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);
 }
-return initValue;
-  };
-  
-console.log(positiveSum(arr1));
+
+
+function positiveSum (arr) {
+  return arr.filter(x => x>=0).reduce((a, c) => a + c, 0);
+}
+
+
+
 
 
 /*
