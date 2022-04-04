@@ -1,3 +1,16 @@
+//Testing Object constructor
+
+function Vehicle(make, model, color){
+  this.make = make,
+  this.model = model,
+  this.color = color
+}
+
+let favCar = new Vehicle('Honda', 'Civic', 'black');
+
+
+
+
 //Remove all the white space #########################
 const str = ' A   B   C    D ';
 
