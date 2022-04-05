@@ -1,3 +1,51 @@
+let testArr = [-5,-4,-3,-2,-1,0,1,2,3,4,5];
+
+
+let sequence = 0;
+function firstNonConsecutive (arr) {
+
+  if (arr.length < 2){
+    return null
+  } else {
+    for (i=0; i<arr.length; i++){
+      if (arr[i] !== arr[i+1] - 1) {
+        return arr[i+1];
+        continue;
+      } else {
+        sequence = sequence + 1
+      }
+    } if (sequence == arr.length + 1 ) { return null }
+  } console.log(sequence)
+}
+
+console.log(firstNonConsecutive(testArr));
+
+
+/*
+function firstNonConsecutive (arr) {
+
+  if (arr.length < 2){
+    return null
+  } else {
+    for (i=0; i<arr.length; i++){
+      if (arr[i] == arr[i+1] + 1) {
+        console.log(arr[i+1]);
+      } else {
+        console.log('all consec')
+        //return null
+      }
+    }
+  }
+}
+
+console.log(firstNonConsecutive(testArr));
+// console.log((testArr[2+4]));
+
+// console.log(testArr[i])
+// console.log(testArr[i+1])
+// console.log(testArr[i] !== testArr[i+1]);
+
+/*
 //Testing Object constructor
 
 function Vehicle(make, model, color){
