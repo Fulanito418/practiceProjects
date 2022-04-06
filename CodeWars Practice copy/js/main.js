@@ -1,18 +1,76 @@
-let testArr = [-5,-4,-3,-2,-1,0,1,2,3,4,5];
 
+//Solution for checking consecutives
+function firstNonConsecutive(arr) {
+  for (let i = 0; i < arr.length - 1; ++i) {
+    if (arr[i] + 1 !== arr[i + 1]) {
+      return arr[i + 1]
+    }
+  }
+  return null
+}
+
+/*
+let testArr = [-5,-4,-3,-2,-1,0,1,2,10,4,5];
+//let testArr = [-3,-2,-1,0,1,2,3,4,5];
 
 let sequence = 0;
-function firstNonConsecutive (arr) {
 
-  if (arr.length < 2){
+let sumOne = testArr[0] + 1
+
+function firstNonConsecutive (arr) {
+  if (arr.length < 2) {
     return null
   } else {
-    for (i=0; i<arr.length; i++){
-      if (arr[i] !== arr[i+1] - 1) {
-        return arr[i+1];
-        continue;
-      } else {
-        sequence = sequence + 1
+    checkNonConsecutive(arr)
+  }
+}
+
+//console.log(`${arr [i]}` + `  ${arr [i+1]}` + `${arr[i] == arr[i+1]-1}`);
+
+function checkNonConsecutive(arr){
+  
+  for (i=0; i<arr.length-1; i++){
+  if (arr[i] + 1 == arr[i+1]) {
+    continue
+  } else {
+    console.log(arr[i+1])
+    break
+  }
+
+  }
+}
+
+
+
+
+console.log(firstNonConsecutive(testArr));
+
+  //console.log('continues')
+  
+    //arr[i] === arr[i+1] ? arr[i+1] : "hello"
+  
+    //}
+
+
+
+
+
+
+
+// function checkConsecutive() {
+//   for (i=0; i<arr.length - 1; i++){
+//     if (arr[i] !== arr[i+1] - 1) {
+//       return arr[i+1];
+//     } else {
+//       checkConsecutive()
+// }
+//   }
+// }
+
+
+
+/*
+
       }
     } if (sequence == arr.length + 1 ) { return null }
   } console.log(sequence)
@@ -21,7 +79,7 @@ function firstNonConsecutive (arr) {
 console.log(firstNonConsecutive(testArr));
 
 
-/*
+
 function firstNonConsecutive (arr) {
 
   if (arr.length < 2){
@@ -45,7 +103,7 @@ console.log(firstNonConsecutive(testArr));
 // console.log(testArr[i+1])
 // console.log(testArr[i] !== testArr[i+1]);
 
-/*
+
 //Testing Object constructor
 
 function Vehicle(make, model, color){
@@ -65,17 +123,20 @@ const str = ' A   B   C    D ';
 const noWhitespace = str.replace(/\s/g, '');
 console.log(noWhitespace); // 👉️ 'ABCD'
 
-/*
+
 The \s metacharacter matches spaces, tabs and newlines.
 
 We use the g (global) flag to specify that we want to match all occurrences of whitespace characters in the string, not just the first occurrence.
 
 The second parameter the replace function takes is the replacement. In our case we want to replace all whitespace with an empty string (nothing).
-*/
+
 
 
 
 //Add all the positive values in an array #########################
+
+
+
 function positiveSum(arr) {
   var total = 0;    
   for (i = 0; i < arr.length; i++) {    // setup loop to go through array of given length
@@ -100,7 +161,7 @@ function positiveSum (arr) {
 
 
 
-/*
+
 // *Variables*
 // Declare a variable and assign it to your 
 //fav drink as a string. Make sure there is no
