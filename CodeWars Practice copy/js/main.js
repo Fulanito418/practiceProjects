@@ -1,4 +1,19 @@
 
+
+//It's pretty straightforward. Your goal is to create 
+//a function that removes the first and last characters 
+//of a string. You're given one parameter, the original 
+//string. You don't have to worry with strings with less than two characters.
+let str = 'hello'
+let modArr = str.split('');
+modArr.shift();
+modArr.pop();
+str = modArr.join('')
+console.log(str);
+
+
+//console.log(str.split('').shift().pop().join();
+
 //Solution for checking consecutives
 function firstNonConsecutive(arr) {
   for (let i = 0; i < arr.length - 1; ++i) {
