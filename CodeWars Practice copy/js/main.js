@@ -1,3 +1,70 @@
+//Coctail API code
+
+//The user will enter a cocktail. 
+//Get a cocktail name, photo, and instructions and place them in the DOM
+document.querySelector('button').addEventListener('click', getDrink)
+
+function getDrink() {
+    let drink = document.querySelector('input').value
+
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
+    .then(res => res.json()) // parse response as JSON
+    .then(data => {
+      console.log(data.drinks[0])
+      document.querySelector('h2').innerText = data.drinks[0].strDrink
+      document.querySelector('img').src = data.drinks[0].strDrinkThumb
+      document.querySelector('h3').innerText = data.drinks[0].strInstructions
+    })
+    .catch(err => {
+        console.log(`error ${err}`)
+    });
+
+}
+
+
+
+
+
+//Your boss decided to save money by purchasing some cut-rate optical character recognition software for scanning in the text of old novels to your database. At first it seems to capture words okay, but you quickly notice that it throws in a lot of numbers at random places in the text.
+//Your harried co-workers are looking to you for a solution to take this garbled text and remove all of the numbers. Your program will take in a string and clean out all numeric characters, and return a string with spacing and special characters ~#$%^&!@*():;"'.,? all intact.
+
+
+
+let numbersList = [0,1,2,3,4,5,6,7,8,9];
+function isNotNumber(value) {
+  return value = numbersList
+}
+
+let stringW = 'This looks5 grea8t!'
+let arrChar = stringW.split('')
+console.log(arrChar);
+
+let filtered = arrChar.filter(isNotNumber)
+console.log(filtered);
+// filtered is [12, 130, 44]
+
+
+/*
+let stringW = 'This looks5 grea8t!'
+let arrChar = stringW.split('')
+console.log(arrChar);
+//console.log(arrChar.filter(num => Number.isInteger(num)));
+
+function numToFilter(value) {
+  return value = 'g'
+}
+
+console.log(arrChar.filter(numToFilter));
+
+
+//let filtered = [12, 5, 8, 130, 44].filter(isBigEnough)
+// filtered is [12, 130, 44]
+
+
+
+
+/*
+
 
 
 //It's pretty straightforward. Your goal is to create 
