@@ -1,5 +1,16 @@
 
 
+let word = 'h';
+
+
+function capitalizeWord(word){
+  return word.charAt(0).toUpperCase() + word.slice(1);
+}
+
+//const capitalizeWord = (word) => word.replace(word.charAt(0), word.charAt(0).toUpperCase());
+
+console.log(capitalizeWord(word));
+
 //Short Long Short
 //Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty ( zero length ).
 
