@@ -1,3 +1,4 @@
+/*
 //Coctail API code
 
 //The user will enter a cocktail. 
@@ -21,26 +22,38 @@ function getDrink() {
 
 }
 
-
+*/
 
 
 
 //Your boss decided to save money by purchasing some cut-rate optical character recognition software for scanning in the text of old novels to your database. At first it seems to capture words okay, but you quickly notice that it throws in a lot of numbers at random places in the text.
 //Your harried co-workers are looking to you for a solution to take this garbled text and remove all of the numbers. Your program will take in a string and clean out all numeric characters, and return a string with spacing and special characters ~#$%^&!@*():;"'.,? all intact.
 
-
-
 let numbersList = [0,1,2,3,4,5,6,7,8,9];
+// function isNotNumber(value) {
+//   return value = numbersList
+//}
+
 function isNotNumber(value) {
-  return value = numbersList
+  return value !== '0'
+  && value !== '1'
+  && value !== '2'
+  && value !== '3'
+  && value !== '4'
+  && value !== '5'
+  && value !== '6'
+  && value !== '7'
+  && value !== '8'
+  && value !== '9' 
 }
 
-let stringW = 'This looks5 grea8t!'
+let stringW = 'T1h8is loo22ks5 gr99e3a0t!'
 let arrChar = stringW.split('')
 console.log(arrChar);
 
 let filtered = arrChar.filter(isNotNumber)
 console.log(filtered);
+console.log(filtered.join(' '));
 // filtered is [12, 130, 44]
 
 
