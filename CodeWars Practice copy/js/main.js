@@ -1,5 +1,38 @@
 
+let size = 11;
 
+let string = "1";
+
+function stringy(size) {
+  for (i = 0; string.length < size; i++){
+    string += '0'
+    if(string.length < size){
+      string += '1'
+  }
+  
+}
+console.log(string)    
+return string
+}
+
+console.log(stringy(size));
+
+
+/*
+
+// Write a function that will check if two given characters are the same case.
+
+// If any of characters is not a letter, return -1
+// If both characters are the same case, return 1
+// If both characters are letters and not the same case, return 0
+
+function sameCase(a, b){
+  
+  return 0;
+}
+
+
+/*
 let word = 'h';
 
 
