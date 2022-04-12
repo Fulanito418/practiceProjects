@@ -1,19 +1,20 @@
 
-let size = 11;
-
-let string = "1";
+let size = 3;
 
 function stringy(size) {
-  for (i = 0; string.length < size; i++){
-    string += '0'
-    if(string.length < size){
+  let string = "";
+  for (i = 0; string.length< size; i++){
       string += '1'
+      string += '0'
   }
-  
+  if (string.length == size){
+  return string  
+  } else {
+  return string.slice(0, string.length-1)
+  }
 }
-console.log(string)    
-return string
-}
+
+//if(string.length < size){
 
 console.log(stringy(size));
 
