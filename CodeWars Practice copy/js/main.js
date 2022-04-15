@@ -1,5 +1,21 @@
 
+// Write a method, that will get an integer array as parameter and will process every number from this array.
 
+// Return a new array with processing every number of the input-array like this:
+
+// If the number has an integer square root, take this, otherwise square the number.
+
+let nums = [5,100, 49, 10]
+
+function squareOrSquareRoot(array) {
+  
+  let newArr = array.map(num => String(Math.sqrt(num)).includes('.') ? num**2 : Math.sqrt(num))
+  return newArr
+  //return array;  
+}
+
+console.log(squareOrSquareRoot(nums));
+/*
 // Write a function that will check if two given characters are the same case.
 
 // If either of the characters is not a letter, return -1
