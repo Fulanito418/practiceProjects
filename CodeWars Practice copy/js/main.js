@@ -1,4 +1,43 @@
 
+// Please use the following function names:
+
+// addition = add
+
+// multiply = multiply
+
+// division = divide (both integer and float divisions are accepted)
+
+// modulus = mod
+
+// exponential = exponent
+
+// subtraction = subt
+
+function add(a,b){
+  return a + b
+}
+
+function divide(a,b){
+  return a / b
+}
+
+function multiply(a,b){
+  return a * b
+}
+
+function mod(a,b){
+  return a % b
+}
+ 
+function exponent(a,b){
+  return a**b
+}
+  
+function subt(a,b){
+  return a - b
+}
+
+/*
 // Write a method, that will get an integer array as parameter and will process every number from this array.
 
 // Return a new array with processing every number of the input-array like this:
