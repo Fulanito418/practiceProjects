@@ -1,10 +1,30 @@
-
 let arr = ["PT92", 6];
-let bulletIndex = 'PT92 - 17 bullets'.indexOf('bullets');
-let magazineIndex = 'PT92 - 17 bullets'.indexOf('-') + 2;
-let magazineSize = 'PT92 - 17 bullets'.slice(magazineIndex, bulletIndex);
 
-console.log(magazineSize/3);
+
+let weaponsArr = {
+  PT92: 'PT92 - 17 bullets',
+  M4A1: 'M4A1 - 30 bullets',
+  M16A2: 'M16A2 - 30 bullets',
+  PSG1: 'PSG1 - 5 bullets',
+}
+
+function magNumber(info){
+
+  let bulletIndex = weaponsArr[info[0]].indexOf('bullets');
+  let magazineIndex = weaponsArr[info[0]].indexOf('-') + 2;
+  let magazineSize = weaponsArr[info[0]].slice(magazineIndex, bulletIndex);
+
+  if (info[1]*3>magazineSize){
+    return Math.ceil(info[1]*3 / magazineSize);
+  } else {
+    return 1;
+  }
+
+}
+
+console.log(magNumber(arr));
+
+//console.log(magNumber(arr));
 
 // PT92 - 17 bullets
 // M4A1 - 30 bullets
