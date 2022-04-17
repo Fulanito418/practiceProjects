@@ -1,4 +1,18 @@
 
+let arr = ["PT92", 6];
+let bulletIndex = 'PT92 - 17 bullets'.indexOf('bullets');
+let magazineIndex = 'PT92 - 17 bullets'.indexOf('-') + 2;
+let magazineSize = 'PT92 - 17 bullets'.slice(magazineIndex, bulletIndex);
+
+console.log(magazineSize/3);
+
+// PT92 - 17 bullets
+// M4A1 - 30 bullets
+// M16A2 - 30 bullets
+// PSG1 - 5 bullets
+
+
+/*
 // Please use the following function names:
 
 // addition = add
