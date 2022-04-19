@@ -1,4 +1,20 @@
 
+
+
+//Area of a square using arc value
+
+function squareArea(A){
+  //a*4 give you circumference of the circle
+  let circumference = A*4
+  //circumference = pi * D    //D = diameter
+  //circumferece / pi = D
+  let diameter = circumference / Math.PI
+  // D / 2 = r    //the length of the sqaure is r (radius)
+  let radius = diameter / 2
+  return Number((radius*radius).toFixed(2))
+}
+
+/*
 //Rock Paper Scissors
 const rps = (p1, p2) => {
   if ((p1 == 'scissors' && p2 == 'paper') ||
