@@ -1,6 +1,66 @@
+//Barista Problem
+//If you have three customers with times [4,3,2], the first customer is going to wait 4 minutes for his coffee, the second customer is going to wait 4 minutes (the time needed for the first customer to get his coffee), another 2 minutes (the time needed to clean the machine) and 3 more minutes (the time you need to brew his coffee), so in total 9 minutes. The third customer, by the same logic, is about to wait 9 minutes (for the first two customers) + 2 more minutes(cleaning) + 2 minutes (his coffee brewing time). This order of brewing the coffee will end up in a total waiting time of 26 minutes, but note that this may not be the minimum time needed. This time depends on the order you choose to brew the cups of coffee.
+
+
+coffeesList = [3,2,5,10,9]
 
 
 
+
+
+function barista(coffees){
+
+  if (coffees.length<1){
+    return 0
+  }else{
+    //first order from least to greatest
+  coffees.sort((a, b) => a - b)
+  //add each index value with the previous preceding value + 2
+  
+  const sumWithInitial = coffees.reduce(
+    (previousValue, currentValue) => previousValue + currentValue,
+    0
+  );
+  
+  return sumWithInitial + (coffees.length-1)*2
+  }
+  
+  };
+  
+  
+  
+  
+  //return "Let's code!"
+
+
+console.log(barista(coffeesList))
+
+
+
+/*
+
+
+arr = [1, 5, 3, 2, 5]
+
+const flip=(d, a)=>{
+  //Take array a and sort it
+  a.sort()
+  return d === 'R' ? a : a.reverse()
+}
+
+console.log (arr)
+
+
+console.log(arr)
+
+console.log(arr.reverse())
+
+
+
+
+
+
+/*
 //Area of a square using arc value
 
 function squareArea(A){
