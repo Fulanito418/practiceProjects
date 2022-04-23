@@ -1,3 +1,16 @@
+
+//Bin to Decimal
+function binToDec(bin){
+  reverseBin = bin.split('').reverse().join('');
+  sum = 0;
+  for (i=0; i<bin.length; i++) {
+    sum += reverseBin[i]*(2**i)
+  }
+  return sum
+}
+
+
+/*
 //Barista Problem
 //If you have three customers with times [4,3,2], the first customer is going to wait 4 minutes for his coffee, the second customer is going to wait 4 minutes (the time needed for the first customer to get his coffee), another 2 minutes (the time needed to clean the machine) and 3 more minutes (the time you need to brew his coffee), so in total 9 minutes. The third customer, by the same logic, is about to wait 9 minutes (for the first two customers) + 2 more minutes(cleaning) + 2 minutes (his coffee brewing time). This order of brewing the coffee will end up in a total waiting time of 26 minutes, but note that this may not be the minimum time needed. This time depends on the order you choose to brew the cups of coffee.
 
