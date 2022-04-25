@@ -1,4 +1,19 @@
 
+numStr = 5678
+
+function digitize(n) {
+  numArr = [];
+  newArr = String(n).split('').reverse().join()
+  for (i=0; i < n.length; i++){
+    numArr.push(newArr(i))
+  }
+  return numArr;
+}
+
+console.log(digitize(numStr));
+
+
+/*
 //Cat years, Dog years
 
 var humanYearsCatYearsDogYears = function(humanYears) {
