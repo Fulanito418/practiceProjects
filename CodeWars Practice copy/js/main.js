@@ -1,13 +1,50 @@
+// Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
 
-numStr = 5678
+// Example:
+
+// ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+// None of the arrays will be empty, so you don't have to worry about that!
+
+//Removing Elements
+
+
+numArr = ["1Keep", "2Remove", "3Keep", "4Remove", "5Keep"]
+
+
+function removeEveryOther(arr){
+  
+  counter = arr.length;
+  
+  for (i = 0; i < counter; i++){
+    arr.splice(i+1,1);
+}
+
+return arr
+
+}
+console.log(removeEveryOther(numArr))
+
+
+
+
+
+/*
+//Convert number to reversed array of digits
+
+let numStr = 5678
 
 function digitize(n) {
-  numArr = [];
-  newArr = String(n).split('').reverse().join()
-  for (i=0; i < n.length; i++){
-    numArr.push(newArr(i))
+  
+  let numArr = [];
+  
+  //newArr = String(n).split('').reverse().join()
+  
+  for (i=0; i < String(n).length; i++){
+    numArr.push(Number(String(n)[i]))
   }
-  return numArr;
+  
+  return numArr.reverse();
 }
 
 console.log(digitize(numStr));
