@@ -2,6 +2,25 @@
 
 
 
+//Freudian Translator
+function toFreud(string) {
+
+  if(string === ''){
+    return ''
+  } else {
+  strArr = string.split(' ')
+  
+  for (i=0; i < strArr.length; i++) {
+    strArr[i] = 'sex'
+  }  
+  }
+  
+  
+  return strArr.join(' ')
+
+}
+
+/*
 Function 3 - multiplying two numbers
 
 let multiply = (x,y) => x*y
