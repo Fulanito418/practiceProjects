@@ -1,8 +1,31 @@
 
+//Count Odd Numbers below n
 
+function oddCount(n){
+  let odds = 0
+  for (i=1; i<n; i++) {
+    if (i % 2 != 0){
+      odds += 1
+    }
+  }
+  return odds
+}
 
-
+/*
 //Freudian Translator
+
+let stringTest = 'ZLYqfEq QspWi MuuDe MdIpd eQjm YiRa JKLDFQY quCWW lvMlZmO HSDfX pDh GYVUhA bfX FfaSPU nFMnUei Hugsc nqXpv FVcfd rEfQO DXRZM DCuof cQo WiD'
+
+let stringArr = stringTest.split(' ')
+
+console.log(stringArr.map(e => e.toUpperCase()))
+console.log(stringArr.forEach(e => e.toUpperCase()))
+
+// console.log(stringTest)
+
+
+
+/*
 function toFreud(string) {
 
   if(string === ''){
@@ -14,11 +37,12 @@ function toFreud(string) {
     strArr[i] = 'sex'
   }  
   }
-  
-  
+
   return strArr.join(' ')
 
 }
+
+console.log(toFreud(stringTest))
 
 /*
 Function 3 - multiplying two numbers
