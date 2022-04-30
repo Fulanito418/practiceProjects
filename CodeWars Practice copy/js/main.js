@@ -1,4 +1,8 @@
 
+
+
+console.log('Hello');
+/*
 //Grasshopper - Summation
 var summation = function (num) {
   let sum = 0
