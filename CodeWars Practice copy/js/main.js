@@ -1,6 +1,19 @@
 
 //Count Odd Numbers below n
 
+
+
+function oddCount(n){
+
+  if (n % 2 === 0) {
+    return n/2
+  } else {
+    return (n-1)/2
+  }
+  
+  }
+
+  //below doesn't work because of performance
 function oddCount(n){
   let odds = 0
   for (i=1; i<n; i++) {
