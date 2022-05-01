@@ -1,7 +1,51 @@
 
 
+//Counting sheep...
+function countSheeps(arrayOfSheep) {
+  return arrayOfSheep.filter(e => e === true).length
+}
 
-console.log('Hello');
+
+/*
+// TIC TAC TOE
+document.querySelector('.boxOne').addEventListener('click', run)
+
+document.querySelector('.boxTwo').addEventListener('click', runTwo)
+
+
+function run() {
+  document.querySelector('.boxOne').innerText = 'x'
+}
+
+function runTwo() {
+  
+  // check box one and box two
+    if (document.querySelector('.boxTwo').innerText == '' || document.querySelector('.boxOne').innerText == '') {
+      document.querySelector('.boxTwo').innerText = 'X'
+    } else if (document.querySelector('.boxTwo').innerText == 'X'){
+      document.querySelector('.boxTwo').innerText = 'O'
+    } else {
+      document.querySelector('.boxTwo').innerText = 'X'
+    }
+  }
+
+
+
+
+/*
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min(this.args)    
+  }
+  winningMsg () {
+    console.log('Winsm');
+  }
+}
+
+const findSmall = new SmallestIntegerFinder();
+
+
+
 /*
 //Grasshopper - Summation
 var summation = function (num) {
