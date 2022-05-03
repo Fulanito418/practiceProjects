@@ -81,8 +81,13 @@ document.querySelector('.boxTwo').addEventListener('click', placeLetter)
 
 
 
+//Century From Year
+function century(year) {
+  // Finish this :)
+  return Math.ceil(year/100);
+}
 
-
+/*
 //Square(n) Sum
 function squareSum(numbers){
   let sqNums = numbers.map(e => e*e)
