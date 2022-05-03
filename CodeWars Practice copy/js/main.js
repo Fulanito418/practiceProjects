@@ -77,6 +77,16 @@ document.querySelector('.boxTwo').addEventListener('click', placeLetter)
 
 
 
+
+
+//Convert a String to a Number!
+var stringToNumber = function(str){
+  // put your code here
+  return Number(str);
+}
+
+
+/*
 //Beginner - Lost Without a Map
 function maps(x){
   return x.map(x => x*2)
