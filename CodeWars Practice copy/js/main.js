@@ -83,9 +83,15 @@ document.querySelector('.boxTwo').addEventListener('click', placeLetter)
 
 
 
+//Square(n) Sum
+function squareSum(numbers){
+  let sqNums = numbers.map(e => e*e)
+  let sum = sqNums.reduce((acc,e) => acc + e, 0)
+  return sum
+}
 
 
-
+/*
 //Find the smallest integer in the array
 class SmallestIntegerFinder {
   findSmallestInt(args) {
