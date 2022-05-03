@@ -79,6 +79,14 @@ document.querySelector('.boxTwo').addEventListener('click', placeLetter)
 
 
 
+
+//Beginner Series #2 Clock
+function past(h, m, s){
+  return s * 1000 + m * 60 * 1000 + h * 60 * 60 * 1000
+}
+
+
+/*
 //Returning Strings
 function greet(name){
   return `Hello, ${name} how are you doing today?`//your code here
