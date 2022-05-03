@@ -81,6 +81,12 @@ document.querySelector('.boxTwo').addEventListener('click', placeLetter)
 
 
 
+//Keep Hydrated!
+function litres(time) {
+  return Math.floor(time/2);
+}
+
+/*
 //Century From Year
 function century(year) {
   // Finish this :)
