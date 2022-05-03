@@ -1,35 +1,87 @@
+// TIC TAC TOE
+class boxInteraction {
+  constructor (classValue) {
+    this.classValue = classValue
+  }
+  placeLetter () {
+    if (document.querySelector(this.classValue).innerText == '') {
+      document.querySelector(this.classValue).innerText = 'X'  
+    } else if (document.querySelector(this.classValue).innerText == 'X') {
+      document.querySelector(this.classValue).innerText = 'O'
+    } else {
+      document.querySelector(this.classValue).innerText = 'X'  
+    }
+  }
+}
 
 
+// my_element.addEventListener('click', function (e) {
+//   console.log(this.className)           // logs the className of my_element
+//   console.log(e.currentTarget === this) // logs `true`
+// })
+
+
+
+const boxOne = new boxInteraction('.boxOne');
+const boxTwo = new boxInteraction('.boxTwo');
+const boxThree = new boxInteraction('.boxThree');
+const boxFour = new boxInteraction('.boxFour');
+const boxFive = new boxInteraction('.boxFive');
+const boxSix = new boxInteraction('.boxSix');
+const boxSeven = new boxInteraction('.boxSeven');
+const boxEight = new boxInteraction('.boxEight');
+const boxNine = new boxInteraction('.boxNine');
+
+
+document.querySelector('.boxOne').addEventListener('click', boxOne.placeLetter.bind(boxOne))
+document.querySelector('.boxTwo').addEventListener('click', boxOne.placeLetter.bind(boxTwo))
+document.querySelector('.boxThree').addEventListener('click', boxOne.placeLetter.bind(boxThree))
+document.querySelector('.boxFour').addEventListener('click', boxOne.placeLetter.bind(boxFour))
+document.querySelector('.boxFive').addEventListener('click', boxOne.placeLetter.bind(boxFive))
+document.querySelector('.boxSix').addEventListener('click', boxOne.placeLetter.bind(boxSix))
+document.querySelector('.boxSeven').addEventListener('click', boxOne.placeLetter.bind(boxSeven))
+document.querySelector('.boxEight').addEventListener('click', boxOne.placeLetter.bind(boxEight))
+document.querySelector('.boxNine').addEventListener('click', boxOne.placeLetter.bind(boxNine))
+
+function refreshPage() {
+  // window.location.href = window.location.href;
+  location.reload();
+}
+// document.querySelector('.boxOne').onclick = function () {
+//   boxOne.placeLetter()
+// }
+
+// var button = document.querySelector('button');
+// button.onclick = function() {
+//   //do stuff
+// }
+
+document.querySelector('.boxTwo').addEventListener('click', placeLetter)
+
+
+// function run() {
+//   document.querySelector('.boxOne').innerText = 'x'
+// }
+
+// function runTwo() {
+  
+//   // check box one and box two
+//     if (document.querySelector('.boxTwo').innerText == '' || document.querySelector('.boxOne').innerText == '') {
+//       document.querySelector('.boxTwo').innerText = 'X'
+//     } else if (document.querySelector('.boxTwo').innerText == 'X'){
+//       document.querySelector('.boxTwo').innerText = 'O'
+//     } else {
+//       document.querySelector('.boxTwo').innerText = 'X'
+//     }
+//   }
+
+
+
+/*
 //Counting sheep...
 function countSheeps(arrayOfSheep) {
   return arrayOfSheep.filter(e => e === true).length
 }
-
-
-/*
-// TIC TAC TOE
-document.querySelector('.boxOne').addEventListener('click', run)
-
-document.querySelector('.boxTwo').addEventListener('click', runTwo)
-
-
-function run() {
-  document.querySelector('.boxOne').innerText = 'x'
-}
-
-function runTwo() {
-  
-  // check box one and box two
-    if (document.querySelector('.boxTwo').innerText == '' || document.querySelector('.boxOne').innerText == '') {
-      document.querySelector('.boxTwo').innerText = 'X'
-    } else if (document.querySelector('.boxTwo').innerText == 'X'){
-      document.querySelector('.boxTwo').innerText = 'O'
-    } else {
-      document.querySelector('.boxTwo').innerText = 'X'
-    }
-  }
-
-
 
 
 /*

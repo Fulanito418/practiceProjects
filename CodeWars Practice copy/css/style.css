@@ -10,6 +10,11 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
+
+body {
+  background: black;
+}
+
 img{
   display: block;
   margin: 0 auto;
@@ -23,6 +28,7 @@ img{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  color: white;
 }
 
 .boxOne,
@@ -34,15 +40,19 @@ img{
 .boxSeven,
 .boxEight,
 .boxNine {
-  border: solid 2px black;
+  border: solid 2px greenyellow;
   width: 100px;
   height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
   }
 
-h2 {
-  color: black;
+h1 {
+  color: white;
   size: 20px;
-  margin: auto;
+  text-align: center;
 }
 
 /******************************************
