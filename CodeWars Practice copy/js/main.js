@@ -76,6 +76,13 @@ document.querySelector('.boxTwo').addEventListener('click', placeLetter)
 //   }
 
 
+
+//Beginner - Lost Without a Map
+function maps(x){
+  return x.map(x => x*2)
+}
+
+/*
 //A Needle in the Haystack
 function findNeedle(haystack) {
   return 'found the needle at position ' + haystack.indexOf('needle')
