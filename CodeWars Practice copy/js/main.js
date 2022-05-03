@@ -77,6 +77,24 @@ document.querySelector('.boxTwo').addEventListener('click', placeLetter)
 
 
 
+
+
+
+
+
+
+
+
+
+//Find the smallest integer in the array
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min(...args)
+  }
+}
+
+const findSmall = new SmallestIntegerFinder;
+
 /*
 //Counting sheep...
 function countSheeps(arrayOfSheep) {
