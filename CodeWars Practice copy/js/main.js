@@ -79,6 +79,13 @@ document.querySelector('.boxTwo').addEventListener('click', placeLetter)
 
 
 
+//Returning Strings
+function greet(name){
+  return `Hello, ${name} how are you doing today?`//your code here
+}
+
+
+/*
 //Convert a String to a Number!
 var stringToNumber = function(str){
   // put your code here
