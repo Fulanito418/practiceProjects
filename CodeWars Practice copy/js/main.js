@@ -78,9 +78,14 @@ document.querySelector('.boxTwo').addEventListener('click', placeLetter)
 
 
 
+//Abbreviate a Two Word Name
+function abbrevName(name){
+  nameArr = name.split(' ')
+  return (nameArr[0][0] + '.' + nameArr[1][0]).toUpperCase()
 
+}
 
-
+/*
 //Basic Mathematical Operations
 function basicOp(operation, value1, value2)
 {
