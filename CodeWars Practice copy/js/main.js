@@ -76,8 +76,12 @@ document.querySelector('.boxTwo').addEventListener('click', placeLetter)
 //   }
 
 
+//A Needle in the Haystack
+function findNeedle(haystack) {
+  return 'found the needle at position ' + haystack.indexOf('needle')
+}
 
-
+/*
 //Abbreviate a Two Word Name
 function abbrevName(name){
   nameArr = name.split(' ')
