@@ -79,6 +79,12 @@ document.querySelector('.boxTwo').addEventListener('click', placeLetter)
 
 
 
+//Invert values
+function invert(array) {
+  return array.map(e => e*-1)
+}
+
+/*
 
 //Beginner Series #2 Clock
 function past(h, m, s){
