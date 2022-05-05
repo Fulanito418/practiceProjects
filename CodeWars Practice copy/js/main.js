@@ -77,8 +77,14 @@ document.querySelector('.boxTwo').addEventListener('click', placeLetter)
 
 
 
+//Fake Binary
+function fakeBin(x){
+  let strArr = x.split('')
+  return (strArr.map(e => e < 5 ? 0 : 1)).join('')
+}
 
 
+/*
 //Invert values
 function invert(array) {
   return array.map(e => e*-1)
