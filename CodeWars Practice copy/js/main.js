@@ -77,6 +77,15 @@ document.querySelector('.boxTwo').addEventListener('click', placeLetter)
 
 
 
+
+
+//Sum The Strings
+function sumStr(a,b) {
+  return String(+a + +b)
+}
+
+
+/*
 //Fake Binary
 function fakeBin(x){
   let strArr = x.split('')
