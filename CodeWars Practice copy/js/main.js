@@ -1,82 +1,153 @@
-// TIC TAC TOE
-class boxInteraction {
-  constructor (classValue) {
-    this.classValue = classValue
+// // TIC TAC TOE
+// class boxInteraction {
+//   constructor (classValue) {
+//     this.classValue = classValue
+//   }
+//   placeLetter () {
+//     if (document.querySelector(this.classValue).innerText == '') {
+//       document.querySelector(this.classValue).innerText = 'X'  
+//     } else if (document.querySelector(this.classValue).innerText == 'X') {
+//       document.querySelector(this.classValue).innerText = 'O'
+//     } else {
+//       document.querySelector(this.classValue).innerText = 'X'  
+//     }
+//   }
+// }
+
+
+// // my_element.addEventListener('click', function (e) {
+// //   console.log(this.className)           // logs the className of my_element
+// //   console.log(e.currentTarget === this) // logs `true`
+// // })
+
+
+
+// const boxOne = new boxInteraction('.boxOne');
+// const boxTwo = new boxInteraction('.boxTwo');
+// const boxThree = new boxInteraction('.boxThree');
+// const boxFour = new boxInteraction('.boxFour');
+// const boxFive = new boxInteraction('.boxFive');
+// const boxSix = new boxInteraction('.boxSix');
+// const boxSeven = new boxInteraction('.boxSeven');
+// const boxEight = new boxInteraction('.boxEight');
+// const boxNine = new boxInteraction('.boxNine');
+
+
+// document.querySelector('.boxOne').addEventListener('click', boxOne.placeLetter.bind(boxOne))
+// document.querySelector('.boxTwo').addEventListener('click', boxOne.placeLetter.bind(boxTwo))
+// document.querySelector('.boxThree').addEventListener('click', boxOne.placeLetter.bind(boxThree))
+// document.querySelector('.boxFour').addEventListener('click', boxOne.placeLetter.bind(boxFour))
+// document.querySelector('.boxFive').addEventListener('click', boxOne.placeLetter.bind(boxFive))
+// document.querySelector('.boxSix').addEventListener('click', boxOne.placeLetter.bind(boxSix))
+// document.querySelector('.boxSeven').addEventListener('click', boxOne.placeLetter.bind(boxSeven))
+// document.querySelector('.boxEight').addEventListener('click', boxOne.placeLetter.bind(boxEight))
+// document.querySelector('.boxNine').addEventListener('click', boxOne.placeLetter.bind(boxNine))
+
+// function refreshPage() {
+//   // window.location.href = window.location.href;
+//   location.reload();
+// }
+// // document.querySelector('.boxOne').onclick = function () {
+// //   boxOne.placeLetter()
+// // }
+
+// // var button = document.querySelector('button');
+// // button.onclick = function() {
+// //   //do stuff
+// // }
+
+// document.querySelector('.boxTwo').addEventListener('click', placeLetter)
+
+
+// // function run() {
+// //   document.querySelector('.boxOne').innerText = 'x'
+// // }
+
+// // function runTwo() {
+  
+// //   // check box one and box two
+// //     if (document.querySelector('.boxTwo').innerText == '' || document.querySelector('.boxOne').innerText == '') {
+// //       document.querySelector('.boxTwo').innerText = 'X'
+// //     } else if (document.querySelector('.boxTwo').innerText == 'X'){
+// //       document.querySelector('.boxTwo').innerText = 'O'
+// //     } else {
+// //       document.querySelector('.boxTwo').innerText = 'X'
+// //     }
+// //   }
+
+
+
+// credit Card Mask return masked string
+function maskify(cc) {
+  let maskTags = ""
+if (cc.length < 5) {
+  return cc
+} else {
+  for (let i = 0; i < cc.length-4;  i++) {
+    maskTags += '#'
   }
-  placeLetter () {
-    if (document.querySelector(this.classValue).innerText == '') {
-      document.querySelector(this.classValue).innerText = 'X'  
-    } else if (document.querySelector(this.classValue).innerText == 'X') {
-      document.querySelector(this.classValue).innerText = 'O'
-    } else {
-      document.querySelector(this.classValue).innerText = 'X'  
+  return maskTags + cc.slice(cc.length - 4)
+}
+  
+}
+
+
+
+
+/*
+function solver(s){
+  let count = 0
+  for (i = 0; i < s.length; i++) {
+    //console.log(s.slice(i,s.length))
+    if (s.slice(i,s.length)%2!=0) {
+      count+=1
+    }
+  }
+  return count
+}
+//solver('1349');
+
+function solveAgain(s){
+  let count = 0
+  for (i = 0; i < s.length-1; i++) {
+    //console.log(s.slice(0,i+1))
+    if(s.slice(0,i+1)%2!=0)  {
+      count+= 1
+    } 
+  }
+  return count
+}
+
+//solveAgain('1349');
+
+function solveBet(s){
+  let count = 0
+  for (j = 1; j <= s.length; j++) {
+    for (i = 0; i < s.length-2; i++) {
+
+    //console.log(s.slice(j,i+2))
+    if (s.slice(j,i+2).length>0 && s.slice(j,i+2)%2!=0){
+      count+=1
     }
   }
 }
-
-
-// my_element.addEventListener('click', function (e) {
-//   console.log(this.className)           // logs the className of my_element
-//   console.log(e.currentTarget === this) // logs `true`
-// })
-
-
-
-const boxOne = new boxInteraction('.boxOne');
-const boxTwo = new boxInteraction('.boxTwo');
-const boxThree = new boxInteraction('.boxThree');
-const boxFour = new boxInteraction('.boxFour');
-const boxFive = new boxInteraction('.boxFive');
-const boxSix = new boxInteraction('.boxSix');
-const boxSeven = new boxInteraction('.boxSeven');
-const boxEight = new boxInteraction('.boxEight');
-const boxNine = new boxInteraction('.boxNine');
-
-
-document.querySelector('.boxOne').addEventListener('click', boxOne.placeLetter.bind(boxOne))
-document.querySelector('.boxTwo').addEventListener('click', boxOne.placeLetter.bind(boxTwo))
-document.querySelector('.boxThree').addEventListener('click', boxOne.placeLetter.bind(boxThree))
-document.querySelector('.boxFour').addEventListener('click', boxOne.placeLetter.bind(boxFour))
-document.querySelector('.boxFive').addEventListener('click', boxOne.placeLetter.bind(boxFive))
-document.querySelector('.boxSix').addEventListener('click', boxOne.placeLetter.bind(boxSix))
-document.querySelector('.boxSeven').addEventListener('click', boxOne.placeLetter.bind(boxSeven))
-document.querySelector('.boxEight').addEventListener('click', boxOne.placeLetter.bind(boxEight))
-document.querySelector('.boxNine').addEventListener('click', boxOne.placeLetter.bind(boxNine))
-
-function refreshPage() {
-  // window.location.href = window.location.href;
-  location.reload();
+  return(count)
 }
-// document.querySelector('.boxOne').onclick = function () {
-//   boxOne.placeLetter()
-// }
-
-// var button = document.querySelector('button');
-// button.onclick = function() {
-//   //do stuff
-// }
-
-document.querySelector('.boxTwo').addEventListener('click', placeLetter)
 
 
-// function run() {
-//   document.querySelector('.boxOne').innerText = 'x'
-// }
+//console.log(solveBet('1349'));
 
-// function runTwo() {
-  
-//   // check box one and box two
-//     if (document.querySelector('.boxTwo').innerText == '' || document.querySelector('.boxOne').innerText == '') {
-//       document.querySelector('.boxTwo').innerText = 'X'
-//     } else if (document.querySelector('.boxTwo').innerText == 'X'){
-//       document.querySelector('.boxTwo').innerText = 'O'
-//     } else {
-//       document.querySelector('.boxTwo').innerText = 'X'
-//     }
-//   }
+function solve (s) {
+  return solver(s) + solveAgain(s) + solveBet(s)
+}
+
+console.log(solve('1341'));
 
 
 
+
+
+/*
 //Jaden Casing Strings
 String.prototype.toJadenCase = function () {
   return (this.split(' ').map(e => e.charAt(0).toUpperCase() + e.slice(1)).join(' '))
