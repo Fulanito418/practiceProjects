@@ -77,6 +77,24 @@
 
 
 
+
+//Alphabet symmetry Work
+function solve(arr){  
+
+  for (let i = 0; i < arr.length; i++) {
+    
+    console.log(arr[i].split('').map(
+      x => x.toUpperCase().charCodeAt(0)-64))
+    
+      //if (x.toUpperCase())).charCodeAt(0)
+    
+    //arr[i].split('').map(x => x.toUpperCase())
+
+}
+  
+  }
+
+/*
 //Sentence Smash
 function smash (words) {
   return words.join(' ')
