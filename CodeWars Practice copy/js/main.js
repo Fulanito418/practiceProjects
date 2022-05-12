@@ -81,19 +81,20 @@
 //Alphabet symmetry Work
 function solve(arr){  
 
-  for (let i = 0; i < arr.length; i++) {
-    
-    console.log(arr[i].split('').map(
-      x => x.toUpperCase().charCodeAt(0)-64))
-    
-      //if (x.toUpperCase())).charCodeAt(0)
-    
-    //arr[i].split('').map(x => x.toUpperCase())
-
-}
+  let countArr = [];
+  let count = 0;
   
+for (let i = 0; i<arr.length; i++){
+for (let j = 0; j<arr[i].length; j++) {
+    (arr[i].split('')[j].toLowerCase().charCodeAt()-97 === j) ? count +=1 : count+=0
+}
+    countArr.push(count)
+    count = 0
+}
+  return countArr
   }
 
+  
 /*
 //Sentence Smash
 function smash (words) {
