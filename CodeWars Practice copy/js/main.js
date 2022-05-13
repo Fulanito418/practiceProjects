@@ -78,6 +78,53 @@
 
 
 
+//Highest Scoring Word
+
+let word = 'aaa taxi ubud'
+
+function stringValue(s){
+  let sArr = s.split('')
+  let sValue = 0 
+
+  for (let i = 0; i < sArr.length; i++) {
+      sValue += (sArr[i].charCodeAt()-96);      
+  }
+  return sValue
+  sValue = 0
+}
+
+function highA(c){
+  
+  let valArr = []
+  let wordArr = c.split(' ');
+  
+  wordArr.map( e => valArr.push(stringValue(e)))
+  
+
+  return (valArr);
+}
+
+function high(x){
+  let numArr = highA(x);
+  let highScore = numArr[0];
+  let wordPos = numArr.indexOf(Math.max(...numArr))
+  console.log(word.split(' ')[wordPos])
+
+  }
+  //return (String(x.split(' ')[highScore]));
+
+  //console.log(String(x.split(' ')[wordPos]));
+
+
+high(word)
+
+
+
+
+
+
+
+/*
 //Alphabet symmetry Work
 function solve(arr){  
 
@@ -94,7 +141,7 @@ for (let j = 0; j<arr[i].length; j++) {
   return countArr
   }
 
-  
+
 /*
 //Sentence Smash
 function smash (words) {
