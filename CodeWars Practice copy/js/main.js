@@ -78,6 +78,28 @@
 
 
 
+
+// PREP
+// p: words two or more capitalize first letter, preserve spaces
+// r: return string 
+// e: apple => Apple   one  space => One  Space
+// p: change string to an array using split
+// map through array slice first letter and capitalize
+// concatenate with the rest of the word in lowerCase
+// join array
+
+
+function dropCap(n) {
+  strArr = n.split(' ')
+  return (strArr.map(e => e.slice(0,1).toUpperCase() + e.slice(1).toLowerCase())).join(' ')
+}
+
+console.log(dropCap('APPLE  SLIce'))
+
+
+
+
+/*
 //Highest Scoring Word
 
 let word = 'aaa taxi ubud'
