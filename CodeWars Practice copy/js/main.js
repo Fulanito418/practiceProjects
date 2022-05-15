@@ -89,10 +89,37 @@
 // join array
 
 
+
+
+
+//Dropcaps
+// PREP
+// p: words two or more capitalize first letter, preserve spaces
+// r: return string 
+// e: apple => Apple   one  space => One  Space
+// p: change string to an array using split
+// for loop through array 
+//slice first letter and capitalize concatenate with the rest of the word in lowerCase 
+// return join array
+
+
 function dropCap(n) {
+  
   strArr = n.split(' ')
-  return (strArr.map(e => e.slice(0,1).toUpperCase() + e.slice(1).toLowerCase())).join(' ')
+  newArr = [];
+    
+  for (let i of strArr) {
+  if (i.length > 2) {
+   newArr.push(i.slice(0,1).toUpperCase() + i.slice(1).toLowerCase());
+  } else {
+      newArr.push(i);
 }
+}
+  return newArr.join(' ');
+}
+
+
+dropCap('appLe  SlicE')
 
 console.log(dropCap('APPLE  SLIce'))
 
