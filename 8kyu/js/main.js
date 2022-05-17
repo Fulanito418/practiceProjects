@@ -2,6 +2,15 @@
 
 
 
+
+//Volume of a Cuboid
+class Kata {
+  static getVolumeOfCuboid(length, width, height) {
+    // your code here
+  }
+}
+
+
 //Convert a Boolean to a String
 //PREP
 //p: only valid inputs... covert a given boolean into its string representation
