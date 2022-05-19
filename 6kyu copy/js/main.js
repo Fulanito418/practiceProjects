@@ -1,5 +1,8 @@
 //6kyu
 
+
+
+//Shortest steps to a number
 //prep
 //p: a step can be defined as +1 or *2. Starts from 1 
 //r: return shortest number of steps to land on num
