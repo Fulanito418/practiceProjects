@@ -1,5 +1,25 @@
 //7Kyu
 
+//Spinning Rings
+//prep
+//p: inner ring decreases by 1 on each spin, given an innerMax
+// outer ring increases by 1 on each spin, given an outerMax
+//both start at 0, inner and outerMax >=1
+//r: return the number of spins it would take for rings to reach same number
+//e: innerMax is 3 and outerMax is at 2
+// spin1: inner 3, outer 1
+// spin2: inner 2, outer 2
+//return 2
+//p: counter variable= 0
+// for loop, after each loop move through an array to represent inner ring
+//values and outer. innerArr, outerArr. 
+//function to create the inner and outer array 
+
+function spinningRings(innerMax, outerMax) {
+  // your code here
+};
+
+
 
 //Don't give me five!
 //P: positive or negative numbers, start and end inclusive, start is smaller than end
