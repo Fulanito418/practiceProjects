@@ -1,5 +1,34 @@
 //8Kyu
 
+
+//Define a card suit
+//prep
+//p: any card as argument
+//r: return the suit in lowercase
+//e: ('3♣') -> return 'clubs'
+//p: switch case, check -1 for sign
+
+function defineSuit(card) {
+  
+  switch (card.slice(-1)){
+      
+  case '♣': 
+    return 'clubs'
+    break;
+  case '♦': 
+    return 'diamonds'
+    break;
+  case '♥': 
+    return 'hearts'
+    break;
+  case '♠': 
+    return 'spades'
+    break;
+  }
+}
+
+console.log(defineSuit('3♣'))
+
 //
 //PREP
 //P: integers from a to b where a<b
