@@ -1,6 +1,21 @@
 //8Kyu
 
 
+//Merge two sorted arrays into one
+//PREP
+//P: two arrays that may be empty. Only integers.
+//R: Return an array that merges Arr1 and Arr2. No duplicates, in ascending order.
+//E: [1,2,5], [3,5,7] -> [1,2,3,5,7]
+//P: Loop thorugh arr2 and and if it's not in Arr1, push it to Arr1.
+//: return sorted Arr1
+
+function mergeArrays(arr1, arr2) {
+  
+}
+
+
+
+/*
 //Define a card suit
 //prep
 //p: any card as argument
