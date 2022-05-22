@@ -1,6 +1,17 @@
 //8Kyu
 
+//Sum of differences in array
+//p: array of numbers
+//r: return number that represents difference bet consec pairs in 
+//the array in descending order
+//e: [4, 2, 7] -> (7-2) + (2-4) = 3
+//p: check if length is 1 or less, return 0
+//if not, reverse the array and loop through
 
+
+function sumOfDifferences(arr) {
+}
+/*
 //Merge two sorted arrays into one
 //PREP
 //P: two arrays that may be empty. Only integers.
@@ -9,9 +20,18 @@
 //P: Loop thorugh arr2 and and if it's not in Arr1, push it to Arr1.
 //: return sorted Arr1
 
+let arrOne = [1,2,5];
+let arrTwo = [3,4,5];
+
 function mergeArrays(arr1, arr2) {
+  arr2.forEach(x => !arr1.includes(x) ? arr1.push(x) : undefined);
+  return (arr1.sort((a, b) => a - b));   
+    }
   
-}
+//arr.map(char => pairs.hasOwnProperty(char) ? pairs[char] : char)
+  
+console.log(mergeArrays(arrOne,arrTwo)); 
+
 
 
 
