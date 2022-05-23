@@ -1,16 +1,37 @@
 //8Kyu
 
 //Sum of differences in array
+//Sum of differences in array
 //p: array of numbers
 //r: return number that represents difference bet consec pairs in 
 //the array in descending order
 //e: [4, 2, 7] -> (7-2) + (2-4) = 3
-//p: check if length is 1 or less, return 0
-//if not, reverse the array and loop through
+//p: order array in descending order
+// sum variable = 0
+//check if length is 1 or less, return 0
+//if not, loop through array -> arr[i] - arr[i+1]
+// 0, 1, 2
+//0 -> 7 - 2 + 0
+//1 -> 2 - 4 + 5
+//2 -> skip
+
 
 
 function sumOfDifferences(arr) {
+  let sum = 0;
+  arr.sort((a,b)=> b-a)
+  
+
+  if(arr.length <= 1){
+    return 0
+  } else {
+    for (let i = 0; i < arr.length - 1; i ++) {
+      sum = sum + (arr[i]-arr[i+1])
+    }
+  }
+  return sum
 }
+
 /*
 //Merge two sorted arrays into one
 //PREP
