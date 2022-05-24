@@ -1,7 +1,5 @@
 //7Kyu
 
-
-
 //Digital cypher
 //p: str input only lowercase, key only positive integers
 //r: return an array of integers to represent encoded str
@@ -20,28 +18,38 @@
 //pushing 
 
 
-function encode(str,  n)
-{
-  letterArr = [];
-  strArr = str.split('')
-  
-  strArr.forEach(x => letterArr.push(x.charCodeAt(0)-96));
-  //console.log(letterArr)
-  
-  encodedLetters = letterArr.map(x => x + 1);
-  //console.log(encodedLetters)
-  
-  
-   for (let i = 0; i < 6; i++) {
-        
-    console.log(String(n)[i])  
-   }
+//Solution
+function encode(str, n) {
+  const key = String(n)
+  return Array.from(str, (c, i) => c.charCodeAt(0) - 96 + Number(key[i % key.length]))
 }
 
 
-encode('scout',  1939)
+//Refactor This One
+// function encode(str,  n)
+// {
+//   letterArr = [];
+//   strArr = str.split('')
+  
+//   strArr.forEach(x => letterArr.push(x.charCodeAt(0)-96));
+//   //console.log(letterArr)
+  
+//   encodedLetters = letterArr.map(x => x + 1);
+//   //console.log(encodedLetters)
+  
+  
+//    for (let i = 0; i < 10; i++) {
+  
 
+//     if (counter >= String(n).length) {
+//       console.log(String(n)[i-counter])  
+//     } else {
+//       console.log(String(n)[i])  
+//     }
+//    }
+// }
 
+// encode('scout',  1939)
 
 /*
 //Spinning Rings
