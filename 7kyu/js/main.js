@@ -1,5 +1,49 @@
 //7Kyu
 
+
+
+//Digital cypher
+//p: str input only lowercase, key only positive integers
+//r: return an array of integers to represent encoded str
+//e: apple, 1939 -> a= 1 + 1 p= 16 + 9 p = 16 + 3 l= 12 + 9 e= 5 + 1
+// returns [2, 25, 19, 21, 6]
+//p: create an empty array to store letter value of words 
+//change string to array using split
+//loop through array and push letter value to array
+//loop through letter array and return new array with letter charCodes - 96
+//loop through array containing letter values and add key to each one
+
+// counter that starts at 0 and if it reaches key length, go back to 0
+// map through letter value array and add
+
+//or create new array that contains key values, loop through keys and keep
+//pushing 
+
+
+function encode(str,  n)
+{
+  letterArr = [];
+  strArr = str.split('')
+  
+  strArr.forEach(x => letterArr.push(x.charCodeAt(0)-96));
+  //console.log(letterArr)
+  
+  encodedLetters = letterArr.map(x => x + 1);
+  //console.log(encodedLetters)
+  
+  
+   for (let i = 0; i < 6; i++) {
+        
+    console.log(String(n)[i])  
+   }
+}
+
+
+encode('scout',  1939)
+
+
+
+/*
 //Spinning Rings
 //prep
 //p: inner ring decreases by 1 on each spin, given an innerMax
@@ -44,3 +88,4 @@ function dontGiveMeFive(start, end)
 /*
 //Chain me
 chain = (input, fs) => fs.reduce((acc,x) => x(acc), input);
+*/
