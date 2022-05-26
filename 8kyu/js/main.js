@@ -1,6 +1,12 @@
 //8Kyu
 
 /*
+//Training JS #5: Basic data types--Object
+function animal(obj){
+  return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+}
+
+/*
 //Training JS #4: Basic data types--Array
 function getLength(arr){
   //return length of arr
