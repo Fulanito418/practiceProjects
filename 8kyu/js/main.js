@@ -1,5 +1,11 @@
 //8Kyu
 
+
+//Plural
+function plural(n) {
+  return n == 1 ? false : true;
+}
+
 /*
 //Training JS #5: Basic data types--Object
 function animal(obj){
