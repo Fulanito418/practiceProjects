@@ -1,6 +1,18 @@
 //8Kyu
 
 
+
+//Is n divisible by x and y?
+//p: all positive and non zero
+//r: return true or false
+//e: 12, 2, 6 would return true because 12%2 = 0 and 12%6 = 0
+//p: ternary conditional 12 % 2 == 0 && 12 % 6... 
+function isDivisible(n, x, y) {
+  return n%x == 0 && n%y == 0 ? true : false;
+}
+
+/*
+
 //Plural
 function plural(n) {
   return n == 1 ? false : true;
