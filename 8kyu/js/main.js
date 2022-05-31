@@ -2,6 +2,18 @@
 
 
 
+//Jenny's secret message
+function greet(name){
+  
+  if(name === "Johnny")
+    return "Hello, my love!"
+  else {
+    return "Hello, " + name + "!";
+  }
+}
+
+
+/*
 //Is n divisible by x and y?
 //p: all positive and non zero
 //r: return true or false
