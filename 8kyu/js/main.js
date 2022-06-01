@@ -1,6 +1,18 @@
 //8Kyu
 
 
+//Beginner Series #1 School Paperwork
+//p n and m can be below or above 0
+//r return number
+//e if n = 6 and m = 10 then 6x10 = 60, return 60 , if any below 0 return 0
+//p check if n or m are 0 or below, return 0, else return product, can use ternary
+
+function paperwork(n, m) {
+  return n <= 0 || m <= 0 ? 0 : n*m
+}
+
+
+/*
 
 //Jenny's secret message
 function greet(name){
