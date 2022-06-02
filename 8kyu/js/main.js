@@ -1,6 +1,21 @@
 //8Kyu
 
 
+
+
+//Is he gonna survive?
+//p: bullets in postive integers, same for dragons
+//r: return true or false
+//e: if there are 10 bullets you can slay max 5 dragons. if you have 8 bullets but
+// 6 dragons, return false
+//p: bullets / 2 > or equal dragons then return true if not false
+
+function hero(bullets, dragons){
+  return bullets / 2 >= dragons ? true : false
+  }
+
+  
+/*
 //Beginner Series #1 School Paperwork
 //p n and m can be below or above 0
 //r return number
