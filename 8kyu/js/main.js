@@ -1,7 +1,27 @@
 //8Kyu
 
+//Calculate BMI
+//p: weight integer, height ^2 float
+//r: return string BMI 'Normal', etc.
+//e: 90, 1.7 >> BMI 27.68   returns 'Overweight'
+//p: let BMI = 80/(height^2)
+//else if statements. if less than 18.5 return 'Underweight'
+// else ...
 
+function bmi(weight, height) {
 
+  let bmi = weight/(height**2)
+  
+  if(bmi <= 18.5) {
+    return 'Underweight'
+  } else if (bmi <= 25) {
+    return 'Normal'
+  } else if (bmi <= 30) {
+    return 'Overweight'
+  } else {
+    return 'Obese'
+  }
+}
 
 //Is he gonna survive?
 //p: bullets in postive integers, same for dragons
