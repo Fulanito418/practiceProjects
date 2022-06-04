@@ -1,5 +1,28 @@
 //7Kyu
 
+
+
+//Square Every Digit
+//p: integer input and integer return
+//r: return a number
+//e: 245 >> 41625
+//p: create an empty string
+// convert number into an array and forEach value square and
+//concatenate to the empty string
+
+function squareDigits(num){
+  let numString = []
+  let numArr = String(num).split('')
+  numArr.forEach(x => numString.push(x**2))
+  
+  
+  console.log(Number(numString.join('')))
+}
+
+squareDigits(456)
+
+
+/*
 //Digital cypher
 //p: str input only lowercase, key only positive integers
 //r: return an array of integers to represent encoded str
