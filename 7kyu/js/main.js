@@ -1,7 +1,20 @@
 //7Kyu
 
 
+//Sum of two lowest positive integers
+//p: positive integers only, given a numbers array, 4 or more in array
+//r: return the sum of the two lowest numbers
+//e: [5,10,13,6] >> 5+6 = 11
+//p: sort array from lowest to highest
+//take index 0 and index 1 and add them
 
+function sumTwoSmallestNumbers(numbers) {  
+  numbers.sort((a,b)=>a-b)
+  return numbers[0]+numbers[1]
+}
+
+
+/*
 //Square Every Digit
 //p: integer input and integer return
 //r: return a number
