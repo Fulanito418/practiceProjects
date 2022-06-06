@@ -1,5 +1,21 @@
 //7Kyu
 
+//Highest and Lowest
+//p: given a string of numbers separated by spaces
+//r: return a string of the highest and lowest numbers
+//e: "5 8 -4 11" >> "11 -4"
+//p: convert string to array using split, store in var numArr
+//sort from least to greatest
+//push [0] and [array length -1] in var maxMinArr
+function highAndLow(numbers){
+  
+  let numArr = numbers.split(' ')
+  numArr.sort((a,b)=> a-b)
+  console.log(numArr)
+  return (numArr[numArr.length-1] + ' ' + numArr[0])
+}
+
+
 
 //Disemvowel Trolls
 //p: given a string
