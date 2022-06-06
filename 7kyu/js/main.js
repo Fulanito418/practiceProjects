@@ -1,6 +1,27 @@
 //7Kyu
 
 
+//Disemvowel Trolls
+//p: given a string
+//r: return a a string
+//e: 'This is awful!' >> 'Ths s wfl'
+//p: create an array of variable, vowelsArr
+// create an empty array, noVowels
+// turn string into an array, conserve the spaces, using split
+//check to see if any of the characters are inside the vowels array
+//if not, push to new array, noVowels
+//loop through array
+
+function disemvowel(str) {
+  let vowelsArr = ['a','e','i','o','u'];
+  let noVowels = [];
+  let strArr = str.split('')
+  
+  strArr.map(x => vowelsArr.includes(x.toLowerCase()) ? null : noVowels.push(x))
+  return (noVowels.join(''))  
+}
+
+/*
 //Sum of two lowest positive integers
 //p: positive integers only, given a numbers array, 4 or more in array
 //r: return the sum of the two lowest numbers
