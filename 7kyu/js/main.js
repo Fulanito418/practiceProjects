@@ -1,5 +1,27 @@
 //7Kyu
 
+//Get the Middle Character
+//p: given a string, sometimes odd or even
+//r: return a string, single middle letter if given string is odd
+// two middle letters if given string is even
+//e: 'Hello' >> 'l'  'trip' >> 'ri' 
+//p: check if string is less than 3 length, return the string
+//if not, check if odd, return string index of string length /2, round up
+// else return string index of string length/2 (and +1 index)
+
+function getMiddle(s)
+{
+  if (s.length <3){
+    return s
+  } else if (s.length%2 === 1 ){
+    return s[Math.ceil(s.length / 2)-1]
+  } else {
+    return s[Math.ceil(s.length / 2)-1] + s[Math.ceil(s.length / 2)]
+  }
+}
+
+
+
 //Highest and Lowest
 //p: given a string of numbers separated by spaces
 //r: return a string of the highest and lowest numbers
