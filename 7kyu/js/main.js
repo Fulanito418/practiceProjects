@@ -1,5 +1,25 @@
 //7Kyu
 
+
+// "You're a square!"
+//p: given an integer, positive or negative
+//r: return true or false
+//e: 25 >> true 10>> false any negative false
+//p: check if n is negative, return false
+//if not then find the square root, if its an integer, return true
+
+var isSquare = function(n){
+  if (n<0) {
+    return false
+  } else if ( Number.isInteger( n ** (1/2) )  )  {
+    return true
+  } else {
+    return false
+  }
+}
+
+
+/*
 //Get the Middle Character
 //p: given a string, sometimes odd or even
 //r: return a string, single middle letter if given string is odd
