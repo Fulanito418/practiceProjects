@@ -1,6 +1,21 @@
 //7Kyu
 
 
+//Descending Order
+//p: takes in non-negative integers
+//r: return number
+//e: 5923>> 9532
+//p: take number and turn to string
+//split into array and sort high to low
+//return joined array
+
+function descendingOrder(n){
+  let nArr = String(n).split('').sort((a,b)=> b-a)
+  return Number(nArr.join(''))
+}
+
+
+/*
 // "You're a square!"
 //p: given an integer, positive or negative
 //r: return true or false
