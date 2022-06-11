@@ -1,6 +1,20 @@
 //7Kyu
 
 
+//List Filtering
+//p: given non-negative integers and strings
+//r: return a new list with the strings filtered out
+//e: [5,a,4,t,z] >> [5,4]
+//p: filter array by typeOf Number
+
+function filter_list(l) {
+  let numOnly = l.filter(x => typeof x === 'number')
+  return (numOnly)
+}
+
+
+/*
+
 //Descending Order
 //p: takes in non-negative integers
 //r: return number
