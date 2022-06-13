@@ -1,6 +1,32 @@
 //7Kyu
 
 
+//Mumbling
+//p: string of letters, lower or upper case
+//r: return string
+//e: 'WeR' >> W-Ee-Rrr 
+//p: covert string to an array
+//loop thorugh array and 
+
+function accum(s) {
+  
+  let sArr = s.toLowerCase().split('')
+	let mumArr = [];
+  let finalArr =[]
+    
+  for(i=0; i<sArr.length; i++){
+    mumArr.push(sArr[i].repeat(i+1))
+  }
+  
+//   console.log(mumArr.map(x=> charAt(0).toUpperCase()))
+  mumArr.map(x=> finalArr.push((x.charAt(0).toUpperCase()+x.slice(1))))
+
+  return (finalArr.join('-'))
+}
+
+
+
+/*
 //List Filtering
 //p: given non-negative integers and strings
 //r: return a new list with the strings filtered out

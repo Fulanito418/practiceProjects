@@ -22,6 +22,9 @@ snail = function(array) {
     let snailArr = []
     let arrLength = arrTest[0].length
 
+
+
+//This code only takes the edges of the 2d array********************************************************    
     //pushes top edge
     arrTest[0].forEach(x=>snailArr.push(x))
 
@@ -40,12 +43,6 @@ snail = function(array) {
     for (let i = arrLength-2; i > 0; i--) {
         snailArr.push(arrTest[i][0])
         }
-
-
-
-
-
-
 
     console.log(snailArr)
   }
