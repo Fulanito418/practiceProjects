@@ -1,6 +1,31 @@
 //7Kyu
 
 
+
+
+//Exes and Ohs
+//p: given a string of any case letters
+//r: return true or false if equal number of 'x' or 'o' are present in string
+//case insensitive
+//e: 'oooxxx' >> true  "ooBXx" >> true
+//p: turn the str into all lowercase, then an array
+//filter for x
+//filter for o
+//compare lengths, return true or false
+
+function XO(str) {
+  let strLower = str.toLowerCase().split('')
+  
+  let onlyX = strLower.filter(el => el === 'x')
+  let onlyO = strLower.filter(el => el === 'o')
+  
+  return onlyX.length == onlyO.length ? true : false
+
+
+}
+
+
+/*
 //Mumbling
 //p: string of letters, lower or upper case
 //r: return string
