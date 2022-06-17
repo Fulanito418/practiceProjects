@@ -12,6 +12,7 @@ console.log('hello from js')
 //push everything in array0
 //then push the last element in array 1 and 2
 //push remaining elements in last array (array 2)
+//keep counter for the number of turns needed
 
 snail = function(array) {
     console.log(array[0])
