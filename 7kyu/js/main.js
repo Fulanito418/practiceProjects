@@ -1,8 +1,30 @@
 //7Kyu
 
+//P: given a string, can be empty, ignore letter case
+//R: return true or false
+//E: 'After' >> true | 'Before' >> false
+//P: convert string to array, lower case 
+//Use map strough elements and c
+// if >=2 false
 
+//Isograms
+function isIsogram(str){
+  let strArr = str.toLowerCase().split('')
+  console.log(str)
+  if(str.length <= 1) {
+    return true
+  } else {
+    //console.log(strArr.map( (e, i)=> i === e.indexOf(strArr)))  
+    let trueOrFalseArr = (strArr.map( (e, i)=> i === e.indexOf(strArr) ? false : true))  
+    console.log(trueOrFalseArr)
+    //return trueOrFalseArr.indexOf(false) ? true : false
+  }
+  
+}
 
+isIsogram('aba')
 
+/*
 //Exes and Ohs
 //p: given a string of any case letters
 //r: return true or false if equal number of 'x' or 'o' are present in string
