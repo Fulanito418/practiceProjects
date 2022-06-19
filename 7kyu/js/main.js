@@ -10,19 +10,29 @@
 //Isograms
 function isIsogram(str){
   let strArr = str.toLowerCase().split('')
-  console.log(str)
+  let count = 0
+  //console.log(strArr)
+  //console.log(str.length)
+
   if(str.length <= 1) {
-    return true
+    console.log('true')
+    //return true
   } else {
-    //console.log(strArr.map( (e, i)=> i === e.indexOf(strArr)))  
-    let trueOrFalseArr = (strArr.map( (e, i)=> i === e.indexOf(strArr) ? false : true))  
-    console.log(trueOrFalseArr)
-    //return trueOrFalseArr.indexOf(false) ? true : false
+    
+    //console.log(strArr.indexOf('n')); 
+    //console.log(strArr.lastIndexOf('n')); 
+    strArr.forEach( e => strArr.indexOf(e) === strArr.lastIndexOf(e) ? count++ : count+=2)
+    console.log(count)
+    console.log(str.length)
+    console.log(count === str.length)
+    return count === str.length ? 'true' : 'false'
+    return count === str.length ? true : false
+
   }
   
 }
 
-isIsogram('aba')
+console.log(isIsogram('are'))
 
 /*
 //Exes and Ohs
