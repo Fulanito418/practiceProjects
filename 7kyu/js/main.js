@@ -1,5 +1,39 @@
 //7Kyu
 
+
+//Shortest Word
+
+//p string of words, never empty, single data type
+//r return the length of the shortest word(s)
+//e 'hi hill hundreds' >> 2
+//p 
+
+function findShort(s) {
+  
+  //turn the string into an array using split
+  let stringArr = s.split(' ')
+  //create an empty array to collect string lengths
+  let stringLengths = [];
+  
+  //loop through stringArr and push string lengths 
+  //into the stringLengths array
+  stringArr.forEach( function(e) {
+    stringLengths.push(e.length)
+
+    //console.log(stringLengths)
+  });
+  //sort stringLengths from least to greatest and return
+  //value at index 0
+  stringLengths.sort((a,b)=> a-b )
+  //console.log(stringLengths[0])
+  return stringLengths[0]
+}
+
+console.log(findShort('Hello hill hope'))
+
+
+
+/*
 //P: given a string, can be empty, ignore letter case
 //R: return true or false
 //E: 'After' >> true | 'Before' >> false
