@@ -1,6 +1,36 @@
 //7Kyu
 
 
+
+//Complementary DNA
+//p: given a string of letters representing DNA
+//r: return string
+//e: GATC >> CTAG
+//p
+
+function DNAStrand(dna){
+  //empty array variable to store complements
+  let compArr = [];
+  //convert dna string to array using split
+  let dnaArr = dna.split('')
+  //forEach element in the array, push its complement to compArr
+  dnaArr.forEach(function(e){
+    if (e == 'A') {
+      compArr.push('T')
+    } else if (e == 'T') {
+      compArr.push('A')
+    } else if (e == 'C') {
+      compArr.push('G')
+    } else {
+      compArr.push('C')
+    }
+  })
+  //return joined compArr 
+  return compArr.join('')
+}
+
+
+/*
 //Shortest Word
 
 //p string of words, never empty, single data type
