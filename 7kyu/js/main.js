@@ -2,6 +2,14 @@
 
 
 
+//Beginner Series #3 Sum of Numbers
+
+function getSum( a,b )
+{
+   //Good luck!
+}
+
+/*
 //Complementary DNA
 //p: given a string of letters representing DNA
 //r: return string
