@@ -2,12 +2,37 @@
 
 
 
-//Beginner Series #3 Sum of Numbers
+//`Beginner Series #3 Sum of Numbers`
 
-function getSum( a,b )
-{
-   //Good luck!
+
+//p: given two integers, positive or negative, any order
+// if equal return one of the given values
+//r: return number, sum
+//e: 5,7 >> 5 + 6 + 7
+//p
+
+function getSum( a,b ) {
+  //variable for counter
+  let counter = 0;
+  //variable for bigger value, using max
+  let maxVal = Math.max(a,b);
+  //variable for smaller value, using min
+  let minVal = Math.min(a,b);
+
+  //if a equals b then return a
+  if ( a === b ) {
+    return a
+  } else {
+    //if not, use add all the values in between, inclusive
+   //using a for loop
+    for (i = minVal; i<= maxVal; i++) {
+      counter += i
+    }
+    return counter
+  }
 }
+
+console.log(getSum(10,5))
 
 /*
 //Complementary DNA
