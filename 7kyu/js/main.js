@@ -2,6 +2,38 @@
 
 
 
+//Growth of a Population
+//p: given starting pop (p0), percent increase per year (percent),
+// amount of people coming or leaving the town each year (aug),
+// and pop to surpass (p)
+//r: return whole number showing number of years it will take to surpass p
+//e: 1500, 5, 100, 5000 >>> 15
+//p
+
+function nbYear(p0, percent, aug, p) {
+
+  //variable for years passed =0
+    let counter = 0
+  //variable for current pop
+    let currentPop = p0
+  //while currentPop p0 keep looping, increading counter by 1
+    
+  console.log(p0, percent, aug, p )
+  //   console.log(currentPop * (1 + (percent/100)) + aug)
+    
+    while(currentPop <= p) {
+      
+      currentPop = currentPop * (1 + (percent/100)) + aug
+      console.log(currentPop)
+      counter++
+      
+    }
+    
+    
+    return counter
+  }
+  
+
 //`Beginner Series #3 Sum of Numbers`
 
 
