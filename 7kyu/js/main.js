@@ -1,7 +1,22 @@
 //7Kyu
 
+//Friend or Foe?
+// p: given an array of names, strings
+// r: return array of names with exactly 4 letters
+// e: ['Ryan', 'Veronica', 'Phil', 'Frank'] >>> ['Ryan', 'Phil']
+// p
+
+function friend(friends){
+  //filter array by string lengths equal to 4
+  let myFriends = friends.filter(e => e.length === 4)
+  return myFriends
+}
+
+console.log(friend(["Ryan", "Kieran", "Mark"]))
 
 
+
+//Not Completed
 //Growth of a Population
 //p: given starting pop (p0), percent increase per year (percent),
 // amount of people coming or leaving the town each year (aug),
