@@ -2,6 +2,11 @@
 
 
 
+//Multiples of 3 or 5
+function solution(number){
+  
+}
+
 //Shortest steps to a number
 //prep
 //p: a step can be defined as +1 or *2. Starts from 1 
