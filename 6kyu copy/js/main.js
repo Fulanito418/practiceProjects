@@ -1,6 +1,14 @@
 //6kyu
 
 
+//Who likes it?
+function likes(names) {
+  // TODO
+}
+
+
+
+/*
 //Multiples of 3 or 5
 //p given a natural number
 //r return a number representing the sum of all the numbers
