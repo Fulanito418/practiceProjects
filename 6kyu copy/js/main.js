@@ -1,8 +1,26 @@
 //6kyu
 
 
+//p: given an array of 10 integers
+//r: return a string in the form of a phone number
+//e: [5,5,5,2,3,4,5,6,7,8]  >>  "(555) 234-5678"
 
 
+function createPhoneNumber(numbers){
+  //variables for each part of the number
+  let areaCode = (numbers.slice(0,3).join(''))
+  let telPrefix = (numbers.slice(3,6).join(''))
+  let lineNumber = (numbers.slice(6).join(''))
+  
+  return `(${areaCode}) ${telPrefix}-${lineNumber}`
+}
+
+console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
+
+
+
+
+/*
 //Who likes it?
 //p: given an array with names, can include 0 values
 //r: return string
