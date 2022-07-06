@@ -1,5 +1,41 @@
 //6kyu
 
+// p given an array of integers, always one integer that appears
+// an odd number of times
+//r return number that appears an odd number of times
+//e [1,1,2] >> 2 [0,1,0,1,0] >> 0 
+//p
+
+let testVal = [20,1,1,2,2,3,3,5,5,4,20,4,5]
+//let testVal = [1,1,2]
+function findOdd(A) {
+    
+  let count = 0;
+  A.sort((a,b) => a-b)
+
+  //if number and one after are the same add one to count
+  
+  for (let i = 0; i < A.length; i++) {
+    
+    //console.log(A[i] == A[i+1])
+   
+    if (A[i] == A[i+1]) {
+      //console.log(`${A[i]} ${A[i+1]}`)
+      count++
+    } else if (A[i]!=A[i+1]) {
+      count++
+      //console.log('count: ' + count)
+      if (count % 2 == 1){
+        return A[i]
+        break;
+      } 
+      count = 0 
+    }
+  }
+}
+
+
+/*
 //Create Phone Number
 //p: given an array of 10 integers
 //r: return a string in the form of a phone number
