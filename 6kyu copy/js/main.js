@@ -1,5 +1,26 @@
 //6kyu
 
+
+//Array.diff
+
+function arrayDiff(a, b) {
+  //console.log(a)
+  //console.log(b)
+  for (j=0; j<b.length; j++) {
+   for (i=0; i<a.length; i++) {
+    if (a[i] === b[j]) {
+      a.splice(i,1)
+    }
+     if (a[i] === b[j]) {
+      a.splice(i,1)
+  } 
+  }
+ 
+}
+   return a
+  }
+
+/*
 // p given an array of integers, always one integer that appears
 // an odd number of times
 //r return number that appears an odd number of times
