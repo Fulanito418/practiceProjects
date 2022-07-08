@@ -1,6 +1,6 @@
 //8Kyu
 
-//
+//powers of 2
 //p given a non negative integer
 //r return an array with the values of 2 raised to the power of 0 up to the given
 // integer
