@@ -1,5 +1,23 @@
 //8Kyu
 
+//
+//p given a non negative integer
+//r return an array with the values of 2 raised to the power of 0 up to the given
+// integer
+//e n = 2 > [1,2,4]
+//p
+
+
+function powersOfTwo(n){
+  //create an empty array to push the values
+  let twoPowers = []
+  for (i = 0; i <= n; i++) {
+    twoPowers.push(2**i)
+  }
+  return twoPowers
+}
+
+/*
 //Calculate BMI
 //p: weight integer, height ^2 float
 //r: return string BMI 'Normal', etc.
