@@ -1,6 +1,28 @@
 //6kyu
 
 
+
+//p: given a string, letters, upper and lower, and numbers
+//r: return a number
+//e: 'lucky' >> 0  'bases' >> 1
+//p
+
+let testString = 'aA11';
+
+function duplicateCount(text){
+  //change string to lowercase
+  //change string to array
+  let lowerTextArr = text.toLowerCase().split('')
+  return lowerTextArr
+  
+  //loops through array, if more than one occurence, 
+  //if indexOf is different
+}
+
+console.log(duplicateCount(testString))
+
+/*
+
 //Array.diff
 
 function arrayDiff(a, b) {
