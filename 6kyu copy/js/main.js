@@ -1,22 +1,34 @@
 //6kyu
 
-
-
 //p: given a string, letters, upper and lower, and numbers
 //r: return a number
 //e: 'lucky' >> 0  'bases' >> 1
 //p
 
-let testString = 'aA11';
+let testString = 'aA11bcb';
 
 function duplicateCount(text){
   //change string to lowercase
   //change string to array
+
   let lowerTextArr = text.toLowerCase().split('')
-  return lowerTextArr
   
-  //loops through array, if more than one occurence, 
-  //if indexOf is different
+  //return lowerTextArr
+  //create duplicateArr
+  
+  let duplicatesArr = [];
+
+  for (let i = 0; i<lowerTextArr.length; i++) {
+    //if not in duplicatesArr already and another copy exists in lowerTextArr
+    //then push to duplicates. Check using indexOf
+    if (!duplicatesArr.includes(lowerTextArr[i]) && lowerTextArr.indexOf(lowerTextArr[i], i+1) > 0) { 
+      duplicatesArr.push(lowerTextArr[i])
+    }
+    
+  }
+  return duplicatesArr.length
+  //loops through array, and check if it's in duplicatesArr
+
 }
 
 console.log(duplicateCount(testString))
