@@ -1,5 +1,29 @@
 //6kyu
 
+//Sum of Digits / Digital Root
+//p given a number, n, could have one or more digits
+//r return a single number that represents the sum of all the digits in
+// that number (n)
+//e 1928 >> 1 + 9 + 2 + 8 >> 20
+//p
+
+let testNum = 456
+
+function digital_root(n) {
+  //convert n into a string then an array and use reduce
+  let nArr = String(n).split('')
+  
+  for(let i = 0; i < 10; i++){
+
+  }
+  
+  let sumArr = nArr.reduce((a,c)=>a + +c,0)
+  console.log(String(sumArr).length)
+}
+
+digital_root(testNum)
+
+/*
 //p: given a string, letters, upper and lower, and numbers
 //r: return a number
 //e: 'lucky' >> 0  'bases' >> 1
