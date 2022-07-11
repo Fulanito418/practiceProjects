@@ -7,21 +7,29 @@
 //e 1928 >> 1 + 9 + 2 + 8 >> 20
 //p
 
-let testNum = 456
+let testNum = 132189
 
 function digital_root(n) {
   //convert n into a string then an array and use reduce
   let nArr = String(n).split('')
+  let sumArr = nArr.reduce((a,c)=>a + +c,0)
   
-  for(let i = 0; i < 10; i++){
+  // return sumArr
+  
+  if (String(sumArr).length == 1) {
+    return sumArr
+  } else {
+    return digital_root(Number(sumArr))
+  }
 
   }
-  
-  let sumArr = nArr.reduce((a,c)=>a + +c,0)
-  console.log(String(sumArr).length)
-}
 
-digital_root(testNum)
+  
+
+
+console.log(digital_root(132189))
+
+//digital_root(testNum)
 
 /*
 //p: given a string, letters, upper and lower, and numbers
