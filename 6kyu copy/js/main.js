@@ -1,5 +1,38 @@
 //6kyu
 
+
+//Stop gninnipS My sdroW
+
+//p given a string with one or more words
+//r return a string but with any word 5 letters or longer, reversed
+//e "Hey fellow warriors" >> "Hello wollef sroirraw"
+//p 
+
+let testString = "Hey fellow warriors";
+
+function spinWords(string){
+  //create an empty array to push words
+  let spunWords = [];
+  //take string and change into an array
+  let stringArr = string.split(' ')
+  //loop thorugh array and check if word is 5 or longer
+  stringArr.forEach(element => {
+    if(element.length >= 5) {
+      spunWords.push(element.split('').reverse().join(''))
+    } else {
+      spunWords.push(element)
+    }
+  });
+
+  //console.log(spunWords.join(' '))
+  return (spunWords.join(' '))
+}
+
+spinWords(testString)
+
+
+
+/*
 //Sum of Digits / Digital Root
 //p given a number, n, could have one or more digits
 //r return a single number that represents the sum of all the digits in
