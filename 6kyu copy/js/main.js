@@ -1,6 +1,65 @@
 //6kyu
 
 
+
+//Find The Parity Outlier
+//p given an array of all positives and one odd or vice versa
+//r return a number, the 'outlier'
+//e [2, 4, 6, 8, 9] >> 9
+//p 
+
+let testArr = [2, 4, 0, 100, 4, 11, 2602, 36];
+
+function findOutlier(integers){
+  //create a variable for pushing evens
+  let evenArr = [];
+  //create a variable for pushing odds
+  let oddArr = [];
+
+  //loop through array and push evens to evenArr and vice versa
+  testArr.forEach(e => {
+    if (e % 2 == 0) {
+      evenArr.push(e)
+    } else {
+      oddArr.push(e)
+    }
+  })
+  //check length of evenArr and oddArr, return array[0] with length 1
+  if (evenArr.length == 1) {
+    return evenArr[0]
+  } else {
+    return oddArr[0]
+  }
+}
+
+
+console.log(findOutlier(testArr))
+
+
+/*
+//Bit Counting
+
+
+//p given an integer, always positive
+//r return a number representing the number of bits that are equal to one
+//e 1234 >> 10011010010 in binary so return 5
+//p
+
+let testNum = 1234;
+
+var countBits = function(n) {
+  //variable to store the binary version of n
+  let binaryReturn = Math.abs(n).toString(2);
+  //return that sum of all the bits after splitting to turn into an array
+  return binaryReturn.split('').reduce( (a,c) => a + +c,0)
+};
+
+
+console.log(countBits(testNum))
+
+
+
+/*
 //Stop gninnipS My sdroW
 
 //p given a string with one or more words
