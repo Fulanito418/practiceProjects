@@ -1,7 +1,13 @@
 //6kyu
 
+//Duplicate Encoder
+function duplicateEncode(word){
+    // ...
+}
 
 
+
+/*
 //Find The Parity Outlier
 //p given an array of all positives and one odd or vice versa
 //r return a number, the 'outlier'
