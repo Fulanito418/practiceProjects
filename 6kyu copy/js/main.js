@@ -5,7 +5,7 @@ function duplicateEncode(word){
     // ...
 }
 
-
+//testings
 
 /*
 //Find The Parity Outlier
