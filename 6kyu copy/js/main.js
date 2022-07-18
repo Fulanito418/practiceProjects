@@ -1,11 +1,38 @@
 //6kyu
 
+
 //Duplicate Encoder
+//p given a string, characters may be repeated
+// ignore case
+//r return a string  
+//e "recede"   =>  "()()()"
+// if character repeats replace with ) and 
+//if not replace with (
+//p
+
 function duplicateEncode(word){
-    // ...
+  //convert word to an array
+let wordArr = word.toLowerCase().split('')
+console.log(wordArr)
+  //empty array to push parens
+let parensArr = [];
+
+  //check for the index of each element
+//if the indexOf(e,0) an element is positive
+//and indexOf(e,indexOf(e)+1) is negative
+//then we know for sure it appears once
+wordArr.forEach(e => {
+  if (wordArr.indexOf(e) >= 0 && 
+      wordArr.indexOf(e,wordArr.indexOf(e)+1)<0) {
+    parensArr.push('(')  
+  } else {
+    parensArr.push(')')  
+  }
+   
+                })
+return parensArr.join('')
 }
 
-//testings
 
 /*
 //Find The Parity Outlier
