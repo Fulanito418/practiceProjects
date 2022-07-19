@@ -1,5 +1,13 @@
 //6kyu
 
+//Replace With Alphabet Position
+function alphabetPosition(text) {
+  return text;
+}
+
+
+/*
+
 
 //Duplicate Encoder
 //p given a string, characters may be repeated
