@@ -1,12 +1,18 @@
 //6kyu
 
 //Replace With Alphabet Position
+
+
+// p given a string, replace each letter with its position in the alphabet
+// r  return a string
+// e
+// p
+
 function alphabetPosition(text) {
   return text;
 }
 
 
-/*
 
 
 //Duplicate Encoder
