@@ -1,6 +1,12 @@
 //8Kyu
 
 
+
+let arr = [7, 5, 4]
+
+let [a,b,c] = arr
+
+
 //testing
 
 /*
