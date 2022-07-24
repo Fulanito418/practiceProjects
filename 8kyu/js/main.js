@@ -1,11 +1,19 @@
 //8Kyu
 
 
+//array spread
+// let arr = [7, 5, 4]
 
-let arr = [7, 5, 4]
+// let [a,b,c] = arr
 
-let [a,b,c] = arr
+//object destructuring
+let myObj = {
+  aa: 1,
+  bb: 2,
+  cc: 3
+}
 
+let {aa,bb,cc} = myObj;
 
 //testing
 

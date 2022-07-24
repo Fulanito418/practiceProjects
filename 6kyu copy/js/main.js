@@ -1,5 +1,65 @@
 //6kyu
 
+
+//Persistent Bugger
+// p: given a positive number
+// r: return a number that represents the persistence
+// e: 39>> 3*9=27>> 2*7=14>> 1*4=4 return 3
+// p
+
+
+function persistence(num) {
+  //variable to show count 
+ let count = 0;
+   //variable to store num as an Array
+ let numArr = String(num).split('')
+ //if num is a single digit, return 0
+ if (numArr.length==1) {
+   return 0
+   //if num is not a single digit then multiply all the digits 
+   // and check if you get a single digit, if not repeat
+ } else {
+//     if (String((numArr).reduce((a,c)=>a*c,1)).length > 1) {
+   let x = numArr.reduce((a,c)=>a*c,1)
+   while (String(x).length > 1) {
+     count++
+     x = String(x).split('').reduce((a,c)=>a*c,1)
+   }
+    return count + 1
+   } 
+     
+   }
+
+
+   /*
+
+
+// let myObj = {
+//   a : 1,
+//   b : 2,
+//   c : 1
+// }
+
+// for (x in object) {
+  
+// }
+
+
+//
+
+array = [5, 1, 22, 25, 6, -1, 8, 10]
+
+sequence = [1, 6, -1, 10]
+
+function isValidSubsequence(array, sequence) {
+  array.filter(e => {
+    sequence.includes(e)
+  }) 
+  console.log(array)
+}
+
+
+/*
 //Replace With Alphabet Position
 
 
