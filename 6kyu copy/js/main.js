@@ -1,6 +1,14 @@
 //6kyu
 
 
+//Take a Ten Minutes Walk
+function isValidWalk(walk) {
+  //insert brilliant code here
+}
+
+
+/*
+
 //Persistent Bugger
 // p: given a positive number
 // r: return a number that represents the persistence
