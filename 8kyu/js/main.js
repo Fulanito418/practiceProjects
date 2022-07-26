@@ -1,6 +1,11 @@
 //8Kyu
 
 
+// Spread syntax is very useful when coding because as we can easily create copies of arrays or objects. Useful for functional programming. 
+// Rest syntax offers shorthand for including an arbitrary number of arguments to be passed to a function. It is like an inverse of the spread syntax, taking data and putting it into an array rather than unpacking an array of data, and it works in function arguments, as well as in array and object destructuring.
+
+// The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+
 //array spread
 // let arr = [7, 5, 4]
 
