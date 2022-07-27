@@ -1,6 +1,13 @@
 //7Kyu
 
 
+//reverse list
+function reverseList(arr) {
+  return arr.reverse();
+}
+
+
+/*
 //Sum of the first nth term of Series
 
 function SeriesSum(n) {
