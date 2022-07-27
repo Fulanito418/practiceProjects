@@ -1,5 +1,24 @@
 //7Kyu
 
+
+//Sum of the first nth term of Series
+
+function SeriesSum(n) {
+  
+  let sum = 0;
+  
+  if (n == 1) {
+    return n.toFixed(2);
+  } else {
+    for (let i = 0; i < n; i++) {
+      sum += 1*( 1/(i*3+1) )
+    }
+      return sum.toFixed(2)
+  }
+}
+
+/*
+
 /*
 //Friend or Foe?
 // p: given an array of names, strings
