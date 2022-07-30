@@ -1,6 +1,12 @@
 //6kyu
 
 
+
+// Unique In Order
+var uniqueInOrder=function(iterable){
+  //your code here - remember iterable can be a string or an array
+}
+
 //Take a Ten Minutes Walk
 function isValidWalk(walk) {
   //insert brilliant code here
