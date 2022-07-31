@@ -3,9 +3,50 @@
 
 
 // Unique In Order
+  // p given an array or string
+// r return an array 
+// e 'AAASSSDDDA' >> [A,S,D,A]
+// p
+
+let testCase = 'AAAABBBCCDAABBB';
+let testCaseTwo = [1,2,2,3,3];
+
 var uniqueInOrder=function(iterable){
-  //your code here - remember iterable can be a string or an array
+  
+  //variable to take on iterable value in array form
+  let iterableArr = null;
+  //empty array to push value
+  let returnArr = [];
+  
+  //check for typeof iterable, if object, keep
+  //if string change to array
+  if (typeof(iterable) === 'object') {
+    iterableArr = iterable
+  } else {
+    iterableArr = iterable.split('')
+  }
+  
+  //first value in returnArr will be first value in iterableArr
+  returnArr[0]=iterableArr[0]
+  console.log(returnArr)
+  //loop through array and push values into returnArr if they are not
+  //consecutive. CHeck returnArr value before pushing into
+  for(let i = 1; i<iterableArr.length; i++){
+    
+    if (returnArr[i-1] = iterableArr[i]) {
+      returnArr.push(iterableArr[i])
+    }
+  }
+  return returnArr
+
 }
+
+
+console.log(uniqueInOrder(testCase))
+//console.log(uniqueInOrder(testCaseTwo))
+
+
+/*
 
 //Take a Ten Minutes Walk
 function isValidWalk(walk) {
