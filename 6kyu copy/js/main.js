@@ -25,25 +25,43 @@ var uniqueInOrder=function(iterable){
   } else {
     iterableArr = iterable.split('')
   }
-  
+  // console.log(iterableArr)
   //first value in returnArr will be first value in iterableArr
   returnArr[0]=iterableArr[0]
-  console.log(returnArr)
-  //loop through array and push values into returnArr if they are not
-  //consecutive. CHeck returnArr value before pushing into
-  for(let i = 1; i<iterableArr.length; i++){
-    
-    if (returnArr[i-1] = iterableArr[i]) {
+  // console.log(returnArr[0])
+  // console.log(iterableArr[1])
+  // console.log(returnArr[0]==iterableArr[1])
+  
+
+  //need variable for most recently pushed to make sure you don't
+  //have any consecutive values that are the same
+  //you need this because you wont be able to cross check
+  //using returnArr[i-1] because it's still being built
+  //will look like returnArr = ['A']
+  let justPushed = returnArr[0]
+  
+  for (i = 1; i < iterableArr.length; i++){
+    if (justPushed != iterableArr[i]){
       returnArr.push(iterableArr[i])
     }
+    justPushed = iterableArr[i]
   }
-  return returnArr
+
+  if (iterable.length<1) {
+    return [];
+  }else{
+    return returnArr
+  }
+  //loop through array and push values into returnArr if they are not
+  //consecutive. CHeck returnArr value before pushing into
+
+  // return returnArr
 
 }
 
 
 console.log(uniqueInOrder(testCase))
-//console.log(uniqueInOrder(testCaseTwo))
+console.log(uniqueInOrder(testCaseTwo))
 
 
 /*
