@@ -1,5 +1,63 @@
 //DSA
 
+
+// Maximum Sum Subarray of Size K
+
+
+// Given an array of positive numbers and a positive number ‘k,’ find the maximum sum of any contiguous subarray of size ‘k’.
+
+// Example 1
+// Input: [2, 1, 5, 1, 3, 2], k=3 
+// Output: 9
+// Explanation: Subarray with maximum sum is [5, 1, 3].
+
+// Example 2
+// Input: [2, 3, 4, 1, 5], k=2 
+// Output: 7
+// Explanation: Subarray with maximum sum is [3, 4].
+
+// P Given and array of positive numbers and a positive number 'k' to find the largest possible contiguous subarray of size 'k'
+// R Return the array
+// E
+// P
+
+
+const testCase = [2, 1, 5, 1, 3, 2];
+const testK = 3;
+
+
+function sumFunc(x) {
+  return x.reduce( (acc, d) => acc + d, 0);
+}
+
+
+const max_sub_array_of_size_k = function(k, arr) {
+  
+  //variable to store current max
+  // let currentMax = sumFunc(arr.slice(0,k))
+  let currentMax = 0
+  //variable to store possible max
+  let possibleMax = 0
+
+  for (let i = 0; i <= arr.length-k; i++) {
+
+    currentMax = sumFunc(arr.slice( i, i+k ))
+    console.log(`currentMax = ${currentMax}`)
+    possibleMax = Math.max(currentMax, possibleMax)
+
+  }
+  return possibleMax
+
+};
+
+console.log(max_sub_array_of_size_k(testK, testCase))
+
+
+
+
+
+/*
+
 // class Stack {
 //   constructor(storage, count) {
 
