@@ -22,7 +22,7 @@
 // P
 
 
-const testCase = [2, 1, 5, 1, 3, 2];
+const testCase = [2, 1, 5, 1, 3, 2, 10, 50];
 const testK = 3;
 
 
@@ -34,17 +34,29 @@ function sumFunc(x) {
 const max_sub_array_of_size_k = function(k, arr) {
   
   //variable to store current max
-  // let currentMax = sumFunc(arr.slice(0,k))
-  let currentMax = 0
+  // let sumSubArrayKLength = sumFunc(arr.slice(0,k))
+  let sumSubArrayKLength = 0
   //variable to store possible max
   let possibleMax = 0
+  //store i value to be able to identify starting index of k length subarray that creates max sum
+  let startingIndexOfMax = 0
 
   for (let i = 0; i <= arr.length-k; i++) {
 
-    currentMax = sumFunc(arr.slice( i, i+k ))
-    console.log(`currentMax = ${currentMax}`)
-    possibleMax = Math.max(currentMax, possibleMax)
+    console.log("i value = " + i)
 
+    sumSubArrayKLength = sumFunc(arr.slice( i, i+k ))
+    console.log(`sumSubArrayKLength = ${sumSubArrayKLength}`)
+    
+    possibleMax = Math.max(sumSubArrayKLength, possibleMax)
+    console.log(`possibleMax = ${possibleMax}`)
+
+    if (possibleMax >= sumSubArrayKLength) {
+      startingIndexOfMax = i
+    }
+
+    console.log("starting index of max:" + startingIndexOfMax)
+    
   }
   return possibleMax
 
