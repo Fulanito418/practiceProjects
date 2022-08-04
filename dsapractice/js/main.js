@@ -1,6 +1,167 @@
 //DSA
 
 
+// Given an array of positive integers and a number ‘S,’ find the length of the smallest contiguous subarray whose sum is greater than or equal to ‘S’. Return 0 if no such subarray exists.
+
+// Example 1:
+
+// Input: [2, 1, 5, 2, 3, 2], S=7
+// Output: 2
+// Explanation: The smallest subarray with a sum greater than or equal to ‘7’ is [5, 2].
+
+// Example 2:
+
+// Input: [2, 1, 5, 2, 8], S=7
+// Output: 1
+// Explanation: The smallest subarray with a sum greater than or equal to ‘7’ is [8].
+
+// Example 3:
+
+// Input: [3, 4, 1, 1, 6], S=8
+// Output: 3
+// Explanation: Smallest subarrays with a sum greater than or equal to ‘8’ are [3, 4, 1] or [1, 1, 6].
+
+
+
+
+
+
+const testCase1 = [2, 1, 7, 2, 3, 2] 
+const testCaseS1 = 7
+// Output: 2
+// Explanation: The smallest subarray with a sum greater than or equal to ‘7’ is [5, 2].
+
+// const testCase2 = [2, 1, 5, 2, 8]
+// const testCaseS2 = 7
+// // Output: 1
+// // Explanation: The smallest subarray with a sum greater than or equal to ‘7’ is [8].
+
+// const testCase3 = [3, 4, 1, 1, 6]
+// const testCaseS3 = 8
+// // Output: 3
+// // Explanation: Smallest subarrays with a sum greater than or equal to ‘8’ are [3, 4, 1] or [1, 1, 6].
+
+
+
+
+// ##### START ####
+const smallest_subarray_sum = function(s, arr) {
+    
+//variable for window start
+let windowStart = 0
+//variable for window sum
+let windowSum = 0
+//variable for window length
+let minLength = Infinity
+  
+
+//next, lets start adding up elements in the arr parameter until it is >=7
+
+for (let windowEnd = 0; windowEnd < arr.length; windowEnd++) {
+
+  windowSum += arr[windowEnd] //add the next element
+
+
+  //lets see the current window
+  console.log(arr.slice(windowStart, windowEnd + 1))
+
+  // shrink the window as small as possible until the 'windowSum' is smaller than 's'
+  while (windowSum >= s) {
+    minLength = Math.min(minLength, windowEnd - windowStart + 1);
+    console.log("minLength: "+minLength)
+    windowSum -= arr[windowStart]
+    console.log("windowSum: "+windowSum)
+    windowStart += 1 //sliding the window start one to the right
+    console.log("windowStart = " + windowStart)
+  }
+  
+}
+
+if (minLength === Infinity) {
+  return 0;
+}
+
+return minLength
+
+
+}
+
+  
+  
+
+console.log(smallest_subarray_sum(testCaseS1,testCase1))
+
+
+
+
+
+
+
+
+
+// const smallest_subarray_sum = function(s, arr) {
+
+//   let windowLength = 1;
+//   let subArraySum = 0
+//   //array that we can reduce
+//   let subArrayReduce = [];
+//   let windowMoves = arr.length
+
+//   //checking for sums that are greater than or equal to 's'
+  
+//   for (let i = 0; i < windowMoves; i++) {
+
+//     console.log(`windowMoves: ${windowMoves}`)
+//     console.log(`i value: ${i}`)
+//     //if the sum of the subarray is greater than equal to 's'
+    
+//     subArraySum += arr[i]
+
+//     subArrayReduce.push(arr[i])
+
+//     // console.log(`subArraySum: ${subArraySum}`)
+//     console.log(`subArrayReduce: ${subArrayReduce}`)
+
+//     //first if i reaches the last elements arr.length - 1, then i needs to be reset and the windowMoves need to go from arr.length to arr.length --
+    
+
+//     //or what is if also checks length of array that is getting summed, if length is equal to windowLength then we should check, if condition not met then reset subArraySum to zero
+//     if(subArrayReduce.length == windowLength) {
+//       let sum = subArrayReduce.reduce((acc,e)=> acc+e)
+
+//       if (sum >= s) {
+//         console.log(`subArraySum winner: ${subArraySum}`)
+//       } else {
+//         subArrayReduce = []
+//         sum = 0
+//       }
+//     }
+
+//     if (i == windowMoves - windowLength) {
+//       console.log(`reached the last index of: ${i}`)
+//       i = 0
+//       windowLength++
+//       windowMoves--
+//     }
+    
+    
+//   }
+
+  
+//   //slice 'arr' by i, i+1 >> window size of length 1 
+  
+  
+//   //
+
+
+// };
+
+//console.log(smallest_subarray_sum(testCaseS1,testCase1))
+
+
+
+
+/*
 // Maximum Sum Subarray of Size K
 
 
