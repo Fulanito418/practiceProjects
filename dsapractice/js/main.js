@@ -1,6 +1,123 @@
 //DSA
 
 
+
+/**
+Given a string s of '(' , ')' and lowercase English characters.
+
+Your task is to remove the minimum number of parentheses ( '(' or ')', in any positions ) so that the resulting parentheses string is valid and return any valid string.
+
+Formally, a parentheses string is valid if and only if:
+
+It is the empty string, contains only lowercase characters, or
+It can be written as AB (A concatenated with B), where A and B are valid strings, or
+It can be written as (A), where A is a valid string.
+
+Input: s = "a)b(c)d"
+Output: "ab(c)d"
+
+
+Valid string?? "(abc)"
+Not Valid:  "((abcd)"
+**/
+
+const testCase = "a)b(c)d"
+//expected "ab(c)d"
+// stack = []
+
+function validString (s) {
+  
+  //variable that hold sArr
+  let sArr = s.split('') //[a, b, "", a]
+  console.log (sArr)
+  //stack you add and remove from the end
+  let stackArr = []; //should keep track of bad index
+
+  for (let i = 0; i < sArr.length; i++) {
+    if( sArr[i] == "(" ) {
+      stackArr.push(i)
+    } else if ( sArr[i] == ")" ) {
+    
+      if (stackArr.length > 0) {
+        stackArr.pop() 
+      } else {
+        sArr[i] = ""
+      }
+    }
+  }
+
+  for (let j = 0; j < stackArr.length; j++) {
+    //create varaible to keep track of indices to remove in sArr
+    let sArrRemoveIndex = stackArr[j]
+    //sArr[sArrRemoveIndex] = ""
+    sArr[sArrRemoveIndex] = ""
+  }
+  
+  return sArr.join('')
+  
+  };
+
+
+
+//validString?? "((hello))" valid
+//validString?? ")(hello)(" not valid
+
+console.log(validString(testCase));
+
+
+
+
+
+
+
+
+//NEXT ONE ######################################################################
+
+Problem Statement
+Given a string, find the length of the longest substring in it with no more than K distinct characters.
+
+Example 1:
+
+Input: String="araaci", K=2
+Output: 4
+Explanation: The longest substring with no more than '2' distinct characters is "araa".
+Example 2:
+
+Input: String="araaci", K=1
+Output: 2
+Explanation: The longest substring with no more than '1' distinct characters is "aa".
+Example 3:
+
+Input: String="cbbebi", K=3
+Output: 5
+Explanation: The longest substrings with no more than '3' distinct characters are "cbbeb" & "bbebi".
+Example 4:
+
+Input: String="cbbebi", K=10
+Output: 6
+Explanation: The longest substring with no more than '10' distinct characters is "cbbebi".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 // Given an array of positive integers and a number ‘S,’ find the length of the smallest contiguous subarray whose sum is greater than or equal to ‘S’. Return 0 if no such subarray exists.
 
 // Example 1:

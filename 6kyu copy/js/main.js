@@ -1,6 +1,71 @@
 //6kyu
 
+//Convert string to camel case
+// Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
 
+// Examples
+// "the-stealth-warrior" gets converted to "theStealthWarrior"
+// "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
+
+//p given a string, dash/underscore delimited words into camel case
+// first word should only be capitalized if it already was
+//r reutrn a string
+//e the-stealth-warrior >> theStealthWarrior
+//p
+
+
+const testCase = "the-stealth-warrior";
+
+function toCamelCase(str){
+  
+  
+  //check first letter for uppercase
+  let firstLetterIsUpperCase = (str[0] == str[0].toUpperCase());
+
+  //check for dash or underscore
+  let containsDash = str.includes('-');
+
+  //if dash then split by -
+  //else split by _
+  let strArr
+  if(containsDash) {
+    strArr = str.split('-') 
+  } else {
+    strArr = str.split('_') 
+  }
+    
+  //function that takes in a word and return word with first letter capitalized
+  let camelArr = []
+  //that word gets pushed to an empty array
+  for (let i = 0; i<strArr.length; i++) {
+    if (firstLetterIsUpperCase) {
+      strArr[0].split('')[0].toUpperCase() 
+      + strArr[0].slice(1)
+    }
+  }
+
+  //join those words that were pushed into the empty array
+
+}
+
+
+
+toCamelCase(testCase)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 // Unique In Order
   // p given an array or string
