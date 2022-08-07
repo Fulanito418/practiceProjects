@@ -1,6 +1,20 @@
 //8Kyu
 
 
+
+//reverse Sequence
+const reverseSeq = n => {
+  let myArr = []
+  
+  for (let i = n; i >= 1; i--){
+    myArr.push(i)
+  }
+  
+  return myArr
+};
+
+/*
+
 // Opposites Attract
 function lovefunc(flower1, flower2){
   
