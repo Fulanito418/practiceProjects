@@ -1,9 +1,81 @@
 //leetcode
 
 
+//20. Valid Parentheses
+// Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+// An input string is valid if:
+
+// Open brackets must be closed by the same type of brackets.
+// Open brackets must be closed in the correct order.
+ 
+
+// Example 1:
+
+// Input: s = "()"
+// Output: true
+// Example 2:
+
+// Input: s = "()[]{}"
+// Output: true
+// Example 3:
+
+// Input: s = "(]"
+// Output: false
+ 
+
+// Constraints:
+
+// 1 <= s.length <= 104
+// s consists of parentheses only '()[]{}'.
+
+//p  given a string of characters that may include () {} []
+//r return true or false
+//e "()" true 
+//     "{]" false
+//p
+
+//object to store opening pair for closing tags
+const openingSymbolForClosing = {
+    ')' : '(',
+    '}' : '{',
+    ']' : '['
+}
+
+var isValid = function(s) {
+   
+   
+   //we can use a stack to keep track of any opening characters
+   //i.e.  (, {, [
+   //variable that represents the stack that we can push to
+   let myStack = [];
+   
+   
+   //loop through string
+   //if character is an opening symbol then push it to the stack
+   for (let i = 0; i < s.length; i++) {
+       if (s[i]== '(' || s[i]== '{' || s[i]== '[') {
+           myStack.push(s[i])    
+           console.log(myStack)
+   //if character is a closing tag then check if last character in stack is its opening pair, if so pop it off the stack
+       } else if ( myStack[myStack.length - 1] == openingSymbolForClosing[s[i]] ) {
+           myStack.pop()
+           console.log(myStack)
+       } else {
+           myStack.push(s[i])    
+       }
+   }
+   //check stack, if empty return true (valid), if not return false
+   
+   return myStack.length == 0 ? true : false
+   
+};
 
 
 
+
+
+/*
 You are visiting a farm that has a single row of fruit trees arranged from left to right. The trees are represented by an integer array fruits where fruits[i] is the type of fruit the ith tree produces.
 
 You want to collect as much fruit as possible. However, the owner has some strict rules that you must follow:
