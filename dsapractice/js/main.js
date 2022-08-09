@@ -2,6 +2,76 @@
 
 
 
+
+
+// p given an array of integers
+// r return a number that represents the number of good pairs
+// e [1,2,3,1,2] >> you have a total of 2 good pairs (0,3) (1,4)
+// p 
+
+
+
+//Leet 1512
+// Given an array of integers nums, return the number of good pairs.
+
+// A pair (i, j) is called good if nums[i] == nums[j] and i < j.
+
+ 
+
+// Example 1:
+
+// Input: nums = [1,2,3,1,1,3]
+// Output: 4
+// Explanation: There are 4 good pairs (0,3), (0,4), (3,4), (2,5) 0-indexed.
+// Example 2:
+
+// Input: nums = [1,1,1,1]
+// Output: 6
+// Explanation: Each pair in the array are good.
+// Example 3:
+
+// Input: nums = [1,2,3]
+// Output: 0
+ 
+
+// Constraints:
+
+// 1 <= nums.length <= 100
+// 1 <= nums[i] <= 100
+
+
+
+var numIdenticalPairs = function(nums) {
+
+  //create a hash table to keep track of nums and their occurences
+  //create varirable to keep track of goodPairs
+      const myHash = {}
+      let goodPairs = 0
+  //loop through nums and check if key exists in hash, if it does increase key value by one, if not create new key and set it equal to 1
+      for (let i = 0; i < nums.length; i++) {
+          if (myHash[nums[i]]) {
+              myHash[nums[i]]++
+          } else {
+              myHash[nums[i]] = 1
+          }
+      }
+      console.log(myHash)
+      
+      for (const key in myHash) {
+          let keyValue = myHash[key] - 1
+          goodPairs += ((keyValue)*(keyValue+1))/2
+      }
+      return (goodPairs)
+  
+  //take key values use n(n+1)/2 to figure out how many goodPairs each would make and increase goodPairs by that value
+  
+      
+      
+  
+  };
+
+
+/*
 /**
 Given a string s of '(' , ')' and lowercase English characters.
 
@@ -71,45 +141,31 @@ console.log(validString(testCase));
 
 
 
-//NEXT ONE ######################################################################
+//NEXT ONE ######
 
-Problem Statement
-Given a string, find the length of the longest substring in it with no more than K distinct characters.
+// Problem Statement
+// Given a string, find the length of the longest substring in it with no more than K distinct characters.
 
-Example 1:
+// Example 1:
 
-Input: String="araaci", K=2
-Output: 4
-Explanation: The longest substring with no more than '2' distinct characters is "araa".
-Example 2:
+// Input: String="araaci", K=2
+// Output: 4
+// Explanation: The longest substring with no more than '2' distinct characters is "araa".
+// Example 2:
 
-Input: String="araaci", K=1
-Output: 2
-Explanation: The longest substring with no more than '1' distinct characters is "aa".
-Example 3:
+// Input: String="araaci", K=1
+// Output: 2
+// Explanation: The longest substring with no more than '1' distinct characters is "aa".
+// Example 3:
 
-Input: String="cbbebi", K=3
-Output: 5
-Explanation: The longest substrings with no more than '3' distinct characters are "cbbeb" & "bbebi".
-Example 4:
+// Input: String="cbbebi", K=3
+// Output: 5
+// Explanation: The longest substrings with no more than '3' distinct characters are "cbbeb" & "bbebi".
+// Example 4:
 
-Input: String="cbbebi", K=10
-Output: 6
-Explanation: The longest substring with no more than '10' distinct characters is "cbbebi".
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Input: String="cbbebi", K=10
+// Output: 6
+// Explanation: The longest substring with no more than '10' distinct characters is "cbbebi".
 
 
 
