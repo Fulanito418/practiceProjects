@@ -1,7 +1,19 @@
 //8Kyu
 
 
+//Find Maximum and Minimum Values of a List
 
+var min = function(list){
+    
+  return Math.min(...list);
+}
+
+var max = function(list){
+  
+  return Math.max(...list)
+}
+
+/*
 //reverse Sequence
 const reverseSeq = n => {
   let myArr = []
