@@ -1,6 +1,14 @@
 //8Kyu
 
+//Sum Arrays
+// Sum Numbers
+function sum (numbers) {
+  return numbers.reduce((acc,c)=> acc+c,0)
+  
+  
+};
 
+/*
 //Find Maximum and Minimum Values of a List
 
 var min = function(list){
