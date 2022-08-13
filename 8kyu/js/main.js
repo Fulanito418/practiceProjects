@@ -1,5 +1,25 @@
 //8Kyu
 
+
+//DNA to RNA Conversion
+
+function DNAtoRNA(dna) {
+  let myArr = []
+  
+  dnaArr = dna.split('')
+  
+  dnaArr.forEach(e => {
+    if (e == 'T') {
+      myArr.push('U')
+    } else {
+      myArr.push(e)
+    }
+  })
+  
+  return myArr.join('')
+}
+
+/*
 //Sum Arrays
 // Sum Numbers
 function sum (numbers) {
