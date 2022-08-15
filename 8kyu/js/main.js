@@ -1,5 +1,11 @@
 //8Kyu
 
+//Beginner - Reduce but Grow
+function grow(x){
+  return x.reduce((acc,c) => acc*c,1)
+  }
+
+/*
 //Will you make it?
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   return distanceToPump/mpg <= fuelLeft ? true : false
