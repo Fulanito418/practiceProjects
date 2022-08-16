@@ -1,5 +1,11 @@
 //8Kyu
 
+//Reversed Words
+function reverseWords(str){
+  return str.split(' ').reverse().join(' ')
+}
+
+/*
 //Get the mean of an array
 function getAverage(marks){
   const marksSum = marks.reduce((acc,c)=> acc + c, 0)
