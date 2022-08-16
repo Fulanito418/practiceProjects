@@ -1,5 +1,13 @@
 //8Kyu
 
+//Get the mean of an array
+function getAverage(marks){
+  const marksSum = marks.reduce((acc,c)=> acc + c, 0)
+  const marksAvg = marksSum/marks.length
+  return Math.floor(marksAvg)
+}
+
+/*
 //Beginner - Reduce but Grow
 function grow(x){
   return x.reduce((acc,c) => acc*c,1)
