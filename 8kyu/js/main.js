@@ -1,5 +1,29 @@
 //8Kyu
 
+//Transportation on vacation
+//given number of days (d) that you will rent the car
+// if 7 or more days then you get 50 off your total
+//if 3 or more then you get 20 off your total
+//cost per day is 40
+
+
+
+function rentalCarCost(d) {
+  //7 more more discount
+  const sevenDaysPlusDiscount = 50
+  const threeDaysPlusDiscount = 20
+  const costPerDay = 40
+  
+  if (d >= 7) {
+    return d * costPerDay - sevenDaysPlusDiscount
+  } else if (d >= 3) {
+    return d * costPerDay - threeDaysPlusDiscount
+  } else {
+    return d * costPerDay
+  }
+}
+
+/*
 //Reversed Words
 function reverseWords(str){
   return str.split(' ').reverse().join(' ')
