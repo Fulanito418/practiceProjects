@@ -1,5 +1,17 @@
 //8Kyu
 
+//Count by X
+function countBy(x, n) {
+  let z = [];
+
+  
+  for (let i = 1; i <= n; i++ ) {
+    z.push(x*i)
+  }
+  return z;
+}
+
+/*
 //Transportation on vacation
 //given number of days (d) that you will rent the car
 // if 7 or more days then you get 50 off your total
