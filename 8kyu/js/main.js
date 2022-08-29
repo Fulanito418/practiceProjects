@@ -1,5 +1,42 @@
 //8Kyu
 
+
+//Total amount of points
+//p given an array with results in "x:y"
+//r return a number (x>y: 3 pts; x<y: 0 pts; x=y: 1 pt)
+//e ["3:3", '2:1"] >> return 4
+//p
+
+function points(games) {
+  
+  //initiate variable count = 0
+  let count = 0;
+  
+  //for each value in the array, check index 0 and 2
+  for (let i = 0; i < games.length; i++) {
+    //assign index 0 to var xVal
+    let xVal = games[i][0]
+    //assign index 2 to var yVal
+    let yVal = games[i][2]
+    
+
+  //if x>y increase count by 3
+  // else if x == y , increase count by 1
+      
+    if (xVal > yVal) {
+      count +=3
+    } else if (xVal == yVal) {
+      count +=1
+    }
+  }
+  
+  return count
+  
+}
+
+
+/*
+
 //Count by X
 function countBy(x, n) {
   let z = [];
