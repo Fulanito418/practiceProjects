@@ -1,5 +1,37 @@
 //6kyu
 
+
+//Replace With Alphabet Position
+//p given a string of characters
+//r return a string of numbers representing each letter's position in the alphabet
+//e "A b c" >> "1 2 3"
+//p
+
+function alphabetPosition(text) {
+  let alphabet = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+  'M', 'N', 'O', 'P', 'Q', 'R',  'S', 'T', 'U', 'V', 'W', 'X',
+  'Y', 'Z' ]
+  
+  let returnArr = [];
+  
+  //convert text to uppercase
+  let upperText = text.toUpperCase()
+  
+  //loop through text
+  for (let i = 0; i < text.length; i++) {
+    //if char is in alphabet, push alphabet position value to return array
+    if (alphabet.includes(upperText[i])) {
+      returnArr.push(upperText.charCodeAt(i) - 64)
+    }
+  }
+  
+  
+  return returnArr.join(" ")
+}
+
+
+/*
+
 //Convert string to camel case
 // Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
 
