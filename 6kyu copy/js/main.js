@@ -1,6 +1,39 @@
 //6kyu
 
+//Convert string to camel case
+// p given a dash/underscore delimeted string into camel casing
+// r return string
+// e "the-stealth-warrior" >> theStealWarrior
+// p 
 
+let testCase = "the_stealth_warrior";
+
+function toCamelCase(str){
+  
+  let strArr = null;
+  
+  //check if str contains a dash
+  let containsDash = str.includes('-')
+  //split the str into an array
+  if (containsDash) {
+   strArr = str.split('-') 
+  } else {
+   strArr = str.split('_') 
+  }
+  
+  //take every word starting at index 1 and convert it to uppercase
+  
+    for (let i = 1; i < strArr.length; i++) {
+      strArr.splice(i,1, strArr[i][0].toUpperCase() + strArr[i].slice(1))
+    }  
+  
+  //join the array
+    return strArr.join('')
+}
+
+console.log(toCamelCase(testCase))
+
+/*
 //Replace With Alphabet Position
 //p given a string of characters
 //r return a string of numbers representing each letter's position in the alphabet
