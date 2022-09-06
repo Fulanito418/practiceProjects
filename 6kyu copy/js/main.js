@@ -1,5 +1,40 @@
 //6kyu
 
+//Your order, please
+
+function order(words){
+  let wordsArr = words.split(' ');
+  let myObj = {};
+  let numbers = [1,2,3,4,5,6,7,8,9];
+  let orderArr = [];
+  
+  for (let i = 0; i < wordsArr.length; i ++) {
+    for (let j = 0; j < wordsArr[i].length; j++) {
+      if (numbers.includes(Number(wordsArr[i][j]))) {
+        console.log(wordsArr[i][j])
+        myObj[wordsArr[i][j]] = wordsArr[i]
+    }
+  }
+  }
+  
+  for (key in myObj) {
+    orderArr.push(myObj[key])
+  }
+//   console.log(orderArr.join(' '))
+  return orderArr.join(' ')
+  
+//     for (let j = 0; j < wordsArr[i].length; j++) {
+//         console.log(wordsArr[i][j])
+//       //        if (numbers.includes(Number(wordsArr[i][j]))){
+// //         myObj[wordsArr[i]] = j
+//     }
+//     }
+// //   }
+  
+// //   console.log(myObj)
+}
+
+
 //Convert string to camel case
 // p given a dash/underscore delimeted string into camel casing
 // r return string
