@@ -1,6 +1,45 @@
 //leetcode
 
 
+//Find Pivot Index
+//p given an array of numbers
+//r return the index value of the pivot index, that is, where the sum of the numbers to the left of the pivot are equal to the sums of the nums to the right of the pivot
+//e 
+//p
+
+var pivotIndex = function(nums) {
+
+    //variable to hold sum of nums to the left of the pivot
+    let sumLeft = 0
+    //variable to hold the sum of the nums to the right of the pivot
+    let sumRight = 0
+    
+    //use a for loop starting at 1 and use slice and reduce to take the sum of all the nums starting at index 1 and to the right
+    for (let i = 1; i <= nums.length; i++) {
+        sumLeft = nums.slice( 0, i - 1 ).reduce(( acc, e ) => acc + e, 0)
+        //console.log('sumLeft =' + nums.slice( 0, i - 1 ))
+        sumRight = nums.slice( i ).reduce(( acc, e ) => acc + e, 0)
+        //console.log('sumRight =' +nums.slice( i ))
+        
+        if (sumLeft == sumRight) {
+            return i-1
+        } else if (i == nums.length) {
+            return -1       
+        }
+    }
+    
+    //use the index value to take the sum of all the values to the left of the pivot (0,i-1)
+    
+    //if the leftSum and rightSum are equal, return i-1
+    
+    
+    
+    
+};
+
+
+
+/*
 
 //Running Sum of 1d Array
 // Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
