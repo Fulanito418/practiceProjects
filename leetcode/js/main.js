@@ -1,6 +1,44 @@
 //leetcode
 
 
+//Isomorphic Strings
+//map dictionary
+var isIsomorphic = function(s, t) {
+    
+    //takes care of any edge case where s and t are different lengths
+    if (s.length != t.length) {
+        return false
+        }
+    
+    let sMap = {}
+    let tMap = {}
+    
+    
+    for (let i = 0; i<s.length; i++){
+        sChar = s[i];
+        tChar = t[i];
+        
+        if (sMap[sChar] == undefined) {
+            sMap[sChar] = tChar    
+        }
+        if (tMap[tChar] == undefined) {
+            tMap[tChar] = sChar    
+        }
+        
+        if (sMap[sChar] != tChar || tMap[tChar] != sChar) {
+            return false
+        } 
+    
+    }
+    return true
+    
+}
+
+
+
+
+
+
 //Find Pivot Index
 //p given an array of numbers
 //r return the index value of the pivot index, that is, where the sum of the numbers to the left of the pivot are equal to the sums of the nums to the right of the pivot
