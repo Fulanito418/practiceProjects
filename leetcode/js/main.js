@@ -1,5 +1,46 @@
 //leetcode
 
+//test 1
+// const names = ['ball', 'bat', 'ball', 'jacket', 'ball'];
+// const price = [3,5,3,50,3]
+// const weight = [1,1,1,10,1]
+
+//test 2
+const names = ['ball', 'ball','ball'];
+const price = [3, 3, 3]
+const weight = [1, 2, 2]
+
+function checkDups (names, price, weight) {
+    
+    let itemsObj = {};
+    let duplicates = 0;
+
+    //create a map with item names with price and weight
+    //add items to map as long as they don't exist
+    for (let i = 0; i < names.length; i++) {
+        
+        if (!itemsObj[names[i]]) {
+            itemsObj[names[i]] = [price[i], weight[i]]
+        } else if(price[i] == itemsObj[names[i]][0] && weight[i] == itemsObj[names[i]][1]){
+            //if it does exist, check >>price obj[name][0] and >>weight obj[name][1]
+            console.log(price[i] + ' current price') // current item price 
+            console.log(itemsObj[names[i]][0] + ' price in obj') // item price in obj
+            console.log(price[i] == itemsObj[names[i]][0]) // check if current price == item price in obj
+            
+            console.log(weight[i] + ' current weight') // current item weight 
+            console.log(itemsObj[names[i]][1] + ' weight in obj') // item weight in obj
+            console.log(weight[i] == itemsObj[names[i]][1]) // check if current weight == item weight in ob
+            duplicates++
+        }
+    } //end for loop
+    return duplicates
+    
+
+
+}
+
+console.log(checkDups(names,price,weight))
+/*
 
 //Isomorphic Strings
 //map dictionary
