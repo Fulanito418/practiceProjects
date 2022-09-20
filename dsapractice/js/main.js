@@ -1,7 +1,90 @@
 //DSA
 
+//Test
+let maxX = 5;
+let maxY = 8;
+let data = [ [1, 2], [2, 3], [3, 1], [4, 6], [5, 8] ];
+// let data = [ [5, 8] ]
 
 
+
+function sayHello(maxX, maxY, data) {
+
+  //new array
+  let newArr = new Array();
+
+  for (let i = 0; i < data.length; i++) {
+    let currentX = data[i][0]
+    let currentY = data[i][1]
+    // console.log(currentX, currentY)
+    // this will set newArr[2] to "-*"
+    // console.log(data[i][0])
+    newArr[currentY] = "+"+"-".repeat(currentX*6)+"*"
+    // newArr >> [ empty, empty, ["-*"], ["--*"]  ]
+  }
+  // console.log(newArr)
+  for (let i = maxY + 1; i >= 0; i--) {
+    if (i == maxY + 1 || i == 0) {
+      console.log('+-----+-----+-----+-----+-----+-----+')
+    } else if (newArr[i] == undefined) {
+      console.log('+' + '------'.repeat(maxX)) 
+    } else {
+      console.log(newArr[i])
+    }
+  }
+  //check for index that does not exist 
+  //if dne print XXXXX
+  // for(let i = newArr.length; i >= 0; i--) {
+  //   print(newArr[i])
+  // } 
+}
+
+sayHello(maxX, maxY, data)
+
+
+
+// Write a program, in any language, that will display an ASCII chart given the following data
+// data = [(1,2), (2, 3), (3, 1), (4, 6), (5, 8)].
+// You should be able to print the surrounding components of the chart and then place an * where each data point is specified in the data set. You do not need to print the X and Y legends but that would be helpful. You are given the max x and max y but if you can calculate that it would be helpful.
+
+// Online auction graph display
+// x axis is time
+// y axis is price
+// Title item
+//
+// Given a two-dimension array graph the price over time
+//
+//   +-----+-----+-----+-----+-----+-----+
+//   +  - - - - - *      +
+//   +  - - - - -        +
+//   +            *      +
+//  $+                   +
+//   +                   +
+//   +      *            +
+//   +   *               +
+//   +  - - - *          +
+//   +-----+-----+-----+-----+-----+-----+
+//        time
+//
+//  max x = 5
+//  max y = 8
+//  data = {(1,2), (2, 3), (3, 1), (4, 6), (5, 8)}
+
+
+//Given max x, max y and data = []
+//Test
+// maxX
+// maxY
+// data = [ [1,2], [2, 3], [3, 1], [4, 6], [5, 8] ]
+
+//console.log the chart
+
+//
+
+
+
+
+/*
 
 
 // p given an array of integers
@@ -12,6 +95,10 @@
 
 
 //Leet 1512
+
+
+
+
 // Given an array of integers nums, return the number of good pairs.
 
 // A pair (i, j) is called good if nums[i] == nums[j] and i < j.
@@ -70,71 +157,70 @@ var numIdenticalPairs = function(nums) {
   
   };
 
-
 /*
-/**
-Given a string s of '(' , ')' and lowercase English characters.
 
-Your task is to remove the minimum number of parentheses ( '(' or ')', in any positions ) so that the resulting parentheses string is valid and return any valid string.
+// Given a string s of '(' , ')' and lowercase English characters.
 
-Formally, a parentheses string is valid if and only if:
+// Your task is to remove the minimum number of parentheses ( '(' or ')', in any positions ) so that the resulting parentheses string is valid and return any valid string.
 
-It is the empty string, contains only lowercase characters, or
-It can be written as AB (A concatenated with B), where A and B are valid strings, or
-It can be written as (A), where A is a valid string.
+// Formally, a parentheses string is valid if and only if:
 
-Input: s = "a)b(c)d"
-Output: "ab(c)d"
+// It is the empty string, contains only lowercase characters, or
+// It can be written as AB (A concatenated with B), where A and B are valid strings, or
+// It can be written as (A), where A is a valid string.
+
+// Input: s = "a)b(c)d"
+// Output: "ab(c)d"
 
 
-Valid string?? "(abc)"
-Not Valid:  "((abcd)"
-**/
+// Valid string?? "(abc)"
+// Not Valid:  "((abcd)"
+// **/
 
-const testCase = "a)b(c)d"
-//expected "ab(c)d"
-// stack = []
+// const testCase = "a)b(c)d"
+// //expected "ab(c)d"
+// // stack = []
 
-function validString (s) {
+// function validString (s) {
   
-  //variable that hold sArr
-  let sArr = s.split('') //[a, b, "", a]
-  console.log (sArr)
-  //stack you add and remove from the end
-  let stackArr = []; //should keep track of bad index
+//   //variable that hold sArr
+//   let sArr = s.split('') //[a, b, "", a]
+//   console.log (sArr)
+//   //stack you add and remove from the end
+//   let stackArr = []; //should keep track of bad index
 
-  for (let i = 0; i < sArr.length; i++) {
-    if( sArr[i] == "(" ) {
-      stackArr.push(i)
-    } else if ( sArr[i] == ")" ) {
+//   for (let i = 0; i < sArr.length; i++) {
+//     if( sArr[i] == "(" ) {
+//       stackArr.push(i)
+//     } else if ( sArr[i] == ")" ) {
     
-      if (stackArr.length > 0) {
-        stackArr.pop() 
-      } else {
-        sArr[i] = ""
-      }
-    }
-  }
+//       if (stackArr.length > 0) {
+//         stackArr.pop() 
+//       } else {
+//         sArr[i] = ""
+//       }
+//     }
+//   }
 
-  for (let j = 0; j < stackArr.length; j++) {
-    //create varaible to keep track of indices to remove in sArr
-    let sArrRemoveIndex = stackArr[j]
-    //sArr[sArrRemoveIndex] = ""
-    sArr[sArrRemoveIndex] = ""
-  }
+//   for (let j = 0; j < stackArr.length; j++) {
+//     //create varaible to keep track of indices to remove in sArr
+//     let sArrRemoveIndex = stackArr[j]
+//     //sArr[sArrRemoveIndex] = ""
+//     sArr[sArrRemoveIndex] = ""
+//   }
   
-  return sArr.join('')
+//   return sArr.join('')
   
-  };
+//   };
 
 
 
-//validString?? "((hello))" valid
-//validString?? ")(hello)(" not valid
+// //validString?? "((hello))" valid
+// //validString?? ")(hello)(" not valid
 
-console.log(validString(testCase));
+// console.log(validString(testCase));
 
-
+// */
 
 
 
