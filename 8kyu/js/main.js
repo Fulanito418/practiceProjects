@@ -1,6 +1,20 @@
 //8Kyu
 
+//I love you, a little , a lot, passionately ... not at all
+function howMuchILoveYou(nbPetals) {
+  let sayings = [
+ 'I love you',
+ 'a little',
+ 'a lot',
+ 'passionately',
+ 'madly',
+ 'not at all' ]
+  
+  return sayings[(nbPetals-1) % 6]
+}
 
+
+/*
 //Count the Monkeys
 function monkeyCount(n) {
   let myArr = []
