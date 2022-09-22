@@ -1,6 +1,17 @@
 //8Kyu
 
 
+//Count the Monkeys
+function monkeyCount(n) {
+  let myArr = []
+  
+  for (let i = 1; i <= n; i++ ) {
+    myArr.push(i)
+  }
+   
+   return myArr
+ }
+
 
 /*
 //Sum Mixed Array
