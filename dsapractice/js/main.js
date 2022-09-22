@@ -1,5 +1,19 @@
 //DSA
 
+
+
+let myData = [
+  {name: "baseball", price: 10},
+  {name: "glove", price: 15},
+  {name: "bat", price: 20}
+]
+
+function arrayPractice() {
+
+}
+
+console.log("hello")
+/*
 //Test
 let maxX = 5;
 let maxY = 8;

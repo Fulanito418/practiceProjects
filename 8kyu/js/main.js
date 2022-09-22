@@ -1,6 +1,16 @@
 //8Kyu
 
 
+//Array plus array
+function arrayPlusArray(arr1, arr2) {
+  
+  let newArr = arr1.concat(arr2)
+  return newArr.reduce( (acc,e) => acc + e, 0 )
+  
+}
+
+
+/*
 //Total amount of points
 //p given an array with results in "x:y"
 //r return a number (x>y: 3 pts; x<y: 0 pts; x=y: 1 pt)
