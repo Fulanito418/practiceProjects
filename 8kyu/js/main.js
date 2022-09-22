@@ -1,6 +1,15 @@
 //8Kyu
 
 
+
+/*
+//Sum Mixed Array
+function sumMix(x){
+  return x.reduce( (acc,e) => acc + Number(e), 0 )
+}
+
+/*
+
 //Array plus array
 function arrayPlusArray(arr1, arr2) {
   
