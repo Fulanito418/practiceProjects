@@ -1,5 +1,15 @@
 //8Kyu
 
+//My head is at the wrong end
+function fixTheMeerkat(arr) {
+  let newArr = new Array(3)
+   newArr[0] = arr[2]
+   newArr[1] = arr[1]
+   newArr[2] = arr[0]
+   return newArr
+ }
+
+/*
 //I love you, a little , a lot, passionately ... not at all
 function howMuchILoveYou(nbPetals) {
   let sayings = [
