@@ -1,5 +1,28 @@
 //8Kyu
 
+
+//Sort and Star
+function twoSort(s) {
+  
+  let newArr = [];
+  s.sort()
+  
+  let firstWord = s[0]
+  
+  for (let i = 0; i < firstWord.length; i++) {
+    if ( i == firstWord.length - 1 ) {
+      newArr.push( firstWord[i] )  
+    } else {
+      newArr.push( firstWord[i] + "***" )    
+    }
+    
+  }
+  
+  return (newArr.join(''))
+  
+}
+
+/*
 //My head is at the wrong end
 function fixTheMeerkat(arr) {
   let newArr = new Array(3)
