@@ -1,7 +1,38 @@
 //DSA
 
 
+let myArr = [1,2,3,4,5,6,7,8,9,10]
 
+
+let myWindow = []
+let count = 0
+
+for (let i = 0; i < myArr.length; i++) {
+  let currentVal = myArr[i]
+
+  if (myWindow.length < 3) {
+    count += currentVal
+    myWindow.push(currentVal)
+  } else {
+    // console.log(myWindow, count)
+    let shiftVal = myWindow.shift()
+    myWindow.push(currentVal)
+    count -= shiftVal
+    count += currentVal
+    
+  }
+  
+  if (myWindow.length===3) {
+    console.log(myWindow, count)
+  }
+
+}
+
+
+
+
+
+/*
 let myData = [
   {name: "baseball", price: 10},
   {name: "glove", price: 15},
