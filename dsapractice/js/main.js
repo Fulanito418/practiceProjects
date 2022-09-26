@@ -1,6 +1,68 @@
 //DSA
 
 
+// For a = [25, 35, 872, 228, 53, 278, 872], the output should be solution(a) = 4.
+
+// There are 4 pairs of digit anagrams:
+
+// a[1] = 35 and a[4] = 53 (i = 1 and j = 4),
+// a[2] = 872 and a[5] = 278 (i = 2 and j = 5),
+// a[2] = 872 and a[6] = 872 (i = 2 and j = 6),
+// a[5] = 278 and a[6] = 872 (i = 5 and j = 6).
+
+
+let testCase = [25, 35, 872, 228, 53, 278, 872];
+
+console.log(solution(testCase))
+
+
+function solution(a) {
+  let myObj = {}
+  function sortNums(num) {
+      num.sort((a,b)=> a-b)
+      return num.join('')
+  }
+  
+  
+  let count = 0
+  
+  for (let i = 0; i < a.length; i++) {
+      for (let j = i+1; j < a.length; j++) {
+          
+        let sortedI = sortNums(String(a[i]).split(''))
+        let sortedJ = sortNums(String(a[j]).split(''))
+        //console.log(sortedI, sortedJ, sortedI == sortedJ)
+          
+        if (sortedI == sortedJ) {
+          console.log(sortedI, sortedJ, sortedI == sortedJ)
+          let matchingPair = sortNums([i, j])
+          myObj[matchingPair] = true
+        }
+        
+          }   
+      }
+      return Object.keys(myObj).length
+  }//last
+  
+  
+  //given an array of integers
+  
+  //return number presenting number of digit anagrams
+  
+  //loop through array
+  //compare all of them
+  
+  //double loop
+  
+  //if lengths are different, next
+  //if same length, sort by value
+  //compare if equal
+  //increa count by 1
+
+
+
+
+/*
 let myArr = [1,2,3,4,5,6,7,8,9,10]
 
 
