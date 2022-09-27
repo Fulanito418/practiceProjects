@@ -1,5 +1,80 @@
 //leetcode
 
+//1184. Distance Between Bus Stops
+ var distanceBetweenBusStops = function(distance, start, destination) {
+    
+    
+    //Edge case
+if(start == destination){
+    return 0 
+}
+    
+    let distanceSum = distance.reduce((acc,c)=>acc+c,0)
+    console.log(distanceSum)
+    let distancesTraveled = []
+    let travelAmount = 0
+
+//Scenario start < destination 
+if (start<destination) {
+for (let i = start; i < destination; i++) {
+    travelAmount += distance[i]
+}
+    distancesTraveled.push(travelAmount)
+    distancesTraveled.push(distanceSum - travelAmount)
+    console.log(distancesTraveled)
+} 
+    
+//Scenario start > destination 
+    if (start>destination) {
+for (let i = start-1; i >= destination; i--) {
+    
+    
+    travelAmount += distance[i]
+}
+    console.log(travelAmount)
+    distancesTraveled.push(travelAmount)
+    distancesTraveled.push(distanceSum - travelAmount)
+    // console.log(distancesTraveled)
+} 
+
+
+    //example
+    //sum = 10
+    // [1,2,3,4]
+    //    ^ ^
+    //    E S
+    
+    
+    
+    return Math.min(...distancesTraveled)
+
+};
+
+//given and array to represent the distance between stops
+//given the start number
+//given the destination as a number
+
+//distance from 0 to 2
+//[1,2,3,4]
+// ^   ^
+// from 0 to 1 = 1
+// from 1 to 2 = 2
+//sum is 3
+
+
+
+//what if we go clockwise?
+//collect distance values, from 
+//distance[start] ... + distance[destination - 1]
+
+
+
+//what if we go counter-clockwise?
+// for (let j = 0; j <)
+
+//what if we go backwards?
+
+/*
 //test 1
 // const names = ['ball', 'bat', 'ball', 'jacket', 'ball'];
 // const price = [3,5,3,50,3]
