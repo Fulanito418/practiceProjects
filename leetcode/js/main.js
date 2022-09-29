@@ -1,5 +1,40 @@
 //leetcode
 
+
+//Longest Substring Without Repeating Characters
+/**
+ * @param {string} s
+ * @return {number}
+ */
+ var lengthOfLongestSubstring = function(s) {
+    
+    //create array
+    let myStack = [];
+    let maxSub = 0
+    //push each letter into the array
+    //check if array includes letter you're pushing
+    //if it does, reset stack and record length
+    for (let i = 0; i < s.length; i++) {
+        
+        let currentLetter = s[i]
+        if (myStack.length == 0) {
+            myStack.push(currentLetter)
+            maxSub = 1
+        } else if (myStack.includes(currentLetter)) {
+            maxSub = Math.max(maxSub, myStack.length)
+            myStack = []
+            myStack.push(currentLetter)    
+        } else {
+            myStack.push(currentLetter)    
+            maxSub = Math.max(maxSub, myStack.length)
+        }
+    }
+    
+    return maxSub
+};
+
+
+/*
 //1184. Distance Between Bus Stops
  var distanceBetweenBusStops = function(distance, start, destination) {
     
