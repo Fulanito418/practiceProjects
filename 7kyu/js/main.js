@@ -1,4 +1,20 @@
 //7Kyu
+//Two to One
+function longest(s1, s2) {
+
+  //   create an array to push all letters in s1 and s2
+  let stringsConcat = s1 + s2
+  let newArr = []
+  //if it's already in there then don't push
+  for (char of stringsConcat) {
+    if (!newArr.includes(char)) {
+    newArr.push(char)
+  }  
+  }
+  return (newArr.sort().join('')) 
+  
+}
+/*
 //String ends with
 // given two strings
 // return true or false
