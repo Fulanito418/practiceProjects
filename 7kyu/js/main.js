@@ -1,5 +1,17 @@
 //7Kyu
-
+//String ends with
+// given two strings
+// return true or false
+// length of ending == 2
+// length of str == 3
+// slice str from 3-2
+function solution(str, ending){
+  let endingLen = ending.length
+  let strLen = str.length
+  let endingSlice = str.slice(strLen - endingLen)
+  return endingSlice == ending
+}
+/*
 //Is this a triangle?
 function isTriangle(a,b,c)
 {
