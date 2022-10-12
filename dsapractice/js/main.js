@@ -1,6 +1,53 @@
 //DSA
+//Fizz Buzz
+// // Given a number as an input, print out every integer from 1 to that number. However, when the integer is divisible by 3, print out “Fizz”; when it’s divisible by 5, print out “Buzz”; when it’s divisible by both 3 and 5, print out “Fizz Buzz”.
+
+// //integer
+
+// //console log the number
+// //if number % 3 >> print Fizz
+// //if number % 5 >> print Buzz
+// //if number % 3 && number % 5
+// //>> print Fizz Buzz
+
+// //Example
+// //Input: [1,2,3,4,5,6,7,8,9,10,..,15]
+// // 1 >> 1
+// // 2 >> 2
+// // 3 >> Fizz
+// // 4 >> 4
+// // 5 >> Buzz
+// // 6 >> Fizz
+// // 7 >> 7
+// // 8 >> 8
+// // 9 >> Fizz
+// // 15 >> Fizz Buzz
+
+function fizzBuzz(nums) {
+  for (let i = 1; i <= nums; i++) {
+    
+    if (i % 5 === 0 && i % 3 === 0 ) {
+      console.log('Fizz Buzz')
+    } else if ( i % 3 === 0 ) {
+      console.log('Fizz')
+    } else if ( i % 5 === 0 ) {
+      console.log('Buzz')
+    } else {
+      console.log(i)
+    }
+    
+  }
+}
+
+let testCase = 20;
+console.log(fizzBuzz(testCase));
+
+// console.log("hello");
 
 
+
+
+/*
 // For a = [25, 35, 872, 228, 53, 278, 872], the output should be solution(a) = 4.
 
 // There are 4 pairs of digit anagrams:
