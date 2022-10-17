@@ -1,5 +1,44 @@
 //DSA
 
+
+//Search Insert Position
+var searchInsert = function(nums, target) {
+  
+    
+  let left = 0
+  let right = nums.length - 1
+  let mid;
+  
+  while (left <= right) {
+      mid = left + Math.floor( (right - left) / 2 )   
+      //console.log(`mid: ${mid}`)
+      
+      if ( nums[mid] === target ) {
+          console.log('we found 1')
+          return mid
+      } else if ( nums[mid] < target) {
+          left = mid + 1
+          //if mid is less than the target, AND mid + 1 is higher than the target, then return mid + 1
+          if ( nums[mid + 1] > target || nums[mid + 1] === target || nums[mid + 1] === undefined ) {
+              return mid + 1
+          }
+          
+      } else {
+          //console.log('mid here '+mid)
+          right = mid - 1
+          if ( nums[mid - 1] === target ) {
+              // console.log('mid here '+mid)
+              return mid - 1
+          } else if (nums[mid - 1] < target || nums[mid - 1] === undefined ) {
+              return mid          
+          }
+          
+      }
+          
+      }
+  }
+
+/*
 //First Bad Version
 var solution = function(isBadVersion) {
   /**
