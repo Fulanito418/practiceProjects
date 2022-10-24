@@ -1,4 +1,29 @@
 //7Kyu
+
+
+//Even numbers in an array
+function evenNumbers(array, number) {
+  
+  let filteredArr = array.filter(e => e % 2 === 0 )
+  
+//   console.log(filteredArr.slice(filteredArr.length - number))
+  
+  return filteredArr.slice(filteredArr.length - number)
+  
+  
+}
+
+
+//given an array of numbers
+
+// filter >> keep evens  e % 2 === 0
+
+// slice from length - number
+
+//return that
+
+
+/*
 //Two to One
 function longest(s1, s2) {
 

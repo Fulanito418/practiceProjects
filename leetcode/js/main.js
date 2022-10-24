@@ -1,7 +1,27 @@
 //leetcode
 
 
+const testCaseNums = [5,4,3,2,1]
+const testK = 3
 
+const revNums = (nums, start, end) => {
+	while(start < end) {
+        // console.log(nums[start])
+	[ nums[start], nums[end] ] = [ nums[end], nums[start] ];
+	start++
+	end--	
+	}
+}
+
+
+revNums(testCaseNums, 0, testK-1)
+// revNums(testCaseNums, testK, testCaseNums.length - 1)
+
+console.log(testCaseNums)
+
+
+
+/*
 const App = () => {
     const options = [
       { label: 'Fruit', value: 'fruit' },
