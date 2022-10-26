@@ -1,6 +1,35 @@
-//5kyu
+//6kyu
 
+//Array combinations
+function solve(arr) {
+  
+  let counter = 1
+  
+  let mySet = new Set();
+  
+  for (let i = 0; i < arr.length; i++) {
+    
+    arr[i].forEach(x => mySet.add(String(i)+x))
+    counter *= mySet.size
+    mySet.clear()
+    
+  }
+  
+//   console.log(mySet)
+//   console.log(counter)
+  return counter
+  
+  
+};
 
+//given an array of arrays
+//all numbers
+//return number representing number of unique arrays that can be created
+
+//set that takes in unique values
+//keep multiply counter
+//return counter
+/*
 //Directions Reduction
 //p given an array of directions
 //r return and array showing the final directions
