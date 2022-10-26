@@ -1,6 +1,18 @@
 //7Kyu
+//Nth Smallest Element (Array Series #4)
+function nthSmallest(arr, pos){
+ 
+  return arr.sort((a,b)=>a-b)[pos-1]
+  
+}
 
+//given an arr and pos (a num)
 
+//sort from smallest to largest
+
+//return sorted arr[n-1]
+
+/*
 //Even numbers in an array
 function evenNumbers(array, number) {
   
