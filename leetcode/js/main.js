@@ -1,6 +1,26 @@
 //leetcode
 
 
+var moveZeroes = function(nums) {
+    
+    let size = nums.length
+    for (let i = 0; i < size; i++) {
+        //check if current value is 0
+        if ( nums[i] === 0 ) {
+        //if 0, splice and push to the end
+            console.log('spliced value: '+ nums.splice(i,1))
+            nums.push(0)
+            i--
+            size--
+            // console.log('just pushed a 0 and nums looks like: '+ nums)
+        }    
+    }//end of forLoop
+    
+    return nums
+    
+};
+
+/*
 const testCaseNums = [5,4,3,2,1]
 const testK = 3
 
