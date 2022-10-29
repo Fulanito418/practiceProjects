@@ -1,5 +1,60 @@
 //leetcode
 
+//Two Sum II - Input Array Is Sorted
+const twoSum = (numbers, target) => {
+    
+    
+    let p1 = 0
+    let p2 = numbers.length - 1
+    let midPoint = Math.floor(numbers.length/2)
+    console.log('midpoint '+midPoint)
+    
+    if (numbers[midPoint] > target) {
+        console.log('it is greater')
+        p2 = midPoint
+    } 
+    
+    
+    while (numbers[p1] + numbers[p2] !== target) {
+        if (numbers[p1] + numbers[p2] > target) {
+            p2--
+        } else {
+            p1++
+        }
+    }
+    
+    return [p1 + 1, p2 + 1]
+}
+// var twoSum = function(numbers, target) {
+    
+//     let start = 0
+//     let end = numbers.length - 1
+    
+//     while (start < end) {
+        
+//         if(numbers[start] + numbers[end] === target) {
+//             return [start+1, end+1]    
+//         } else if (numbers[start] + numbers[end] > target) {
+//             console.log(`too big, sum of ${numbers[start] + numbers[end]}`)
+//             end-- 
+//         } else {
+//             console.log(`too small, sum of ${numbers[start] + numbers[end]}`)
+//             start++
+//         }
+//     }
+    
+// };
+
+//while numOne < numTwo
+//start on opposite ends
+//numOne at 0
+//numTwo at numbers.length - 1
+// check sum, if too high, decrease numTwo
+// if too low, increase numOne
+
+//[1,2,3,4,10], 
+//if number is too
+/*
 //move zeroes II
 var moveZeroes = function(nums) {
     
