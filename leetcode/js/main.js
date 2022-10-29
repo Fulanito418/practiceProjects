@@ -1,6 +1,75 @@
 //leetcode
 
+//move zeroes II
+var moveZeroes = function(nums) {
+    
+    
+    //using two pointers
+    let pointerA = 0
+    let pointerB = 1
+    
+    //loop through array of nums
+    //if you A finds a 0, and B encounters a non zero, swap them, increment both
+    
+    while (pointerB < nums.length) {
+        
+        let numsA = nums[pointerA]
+        let numsB = nums[pointerB]
+        
+        //A is 0 and B is 0 >> A stay put and B ++   ###captured in else
+        //A is 0 and B is non zero >> Swap and both ++  ###captured in first condition
+        //A is non-zero and B zero >> both ++   ###
+        //A is non zero and B is non zero >> both ++
+        
+        if (numsA === 0 && numsB != 0) {
+            // console.log('line'+numsA, numsB)
+            [nums[pointerA], nums[pointerB]] = [nums[pointerB], nums[pointerA]]
+            pointerA++
+            pointerB++
+        } else if (numsA === 0 && numsB === 0){
+            pointerB++
+        } else {
+            pointerA++
+            pointerB++      
+        }
+    }
+    return nums
+    
+};
 
+// [1,0,2,0,3]
+//  ^ ^
+//  A B
+ 
+//  //here we move forward A++ and B++
+ 
+//  [1,0,2,0,3]
+//     ^ ^
+//     A B
+// // A found a 0
+// // Swap values in A and B index
+// // nums[A] = nums[B] = nums[B], nums[A]
+
+//  [1,2,0,0,3]
+//       ^ ^
+//       A B
+// //A found a 0, but if you swap A and B, you will leave behind index 2
+      
+// // instead, if A finds a 0, don't swap until B finds a non 0
+//  [1,2,0,0,3]
+//       ^ ^
+//       A B
+//     //if A found a 0 and B
+// // here B ++
+//  [1,2,0,0,3]
+//       ^   ^
+//       A   B      
+//       //swap
+//  [1,2,3,0,0]
+//       ^   ^
+//       A   B  
+/*
+//Move Zeroes
 var moveZeroes = function(nums) {
     
     let size = nums.length
