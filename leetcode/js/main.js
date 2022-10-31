@@ -1,5 +1,76 @@
 //leetcode
 
+//Bulls and Cows
+var getHint = function(secret, guess) {
+  
+    console.log('secret'+secret, 'guess'+guess)
+    let secretIndexMap = {}
+    let secretDigitCount = {}
+    let bullCount = 0
+    let cowCount = 0
+    let maybeArr = []
+    
+    //Make map of index + value in secret
+    for (let i in secret) { 
+        secretIndexMap[String(i) + secret[i]] = true
+    } 
+    console.log('secretIndexMap')
+    console.log(secretIndexMap)
+    //map of number of times a value appears in the secret
+    for (let i in secret) { 
+        if (secretDigitCount[secret[i]]) {
+            secretDigitCount[secret[i]]++
+        }else {
+            secretDigitCount[secret[i]] = 1   
+        }
+    }
+    console.log('secretDigitCount')
+    console.log(secretDigitCount)
+    
+    //use maps to check if there are any bulls
+    for (let i in guess) { 
+        if (secret[i]===guess[i]) {
+            console.log('found a bull'+ guess[i])
+            bullCount++
+            secretDigitCount[secret[i]]--
+        } else {
+            maybeArr.push(i)
+        }
+    }
+    
+    for (let value of maybeArr) {
+        
+        if(secretDigitCount[guess[value]]>0){
+            cowCount++
+            secretDigitCount[guess[value]]--
+        }
+    }
+    
+    
+    // console.log('secretIndexMap')
+    // console.log(secretIndexMap)
+    // console.log('secretDigitCount')
+    // console.log(secretDigitCount)
+    
+    
+    
+    
+//     else if (secretDigitCount[guess[i]] && secretDigitCount[guess[i]] > 0) {
+//             cowCount++
+//             console.log('found a cow'+ guess[i])
+//             secretDigitCount[guess[i]]--
+//         }
+        
+//     }
+
+
+
+    
+    console.log(`${bullCount}A${cowCount}B`)
+    return `${bullCount}A${cowCount}B`
+
+};
+/*
 //Two Sum II - Input Array Is Sorted
 const twoSum = (numbers, target) => {
     
