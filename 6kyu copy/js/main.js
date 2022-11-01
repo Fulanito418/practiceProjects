@@ -1,5 +1,40 @@
 //6kyu
+//String transformer
+function stringTransformer(str) {
+  
+  
+  let strArr = str.split('')
+//   console.log(strArr)
+  
+  
+  for(let index in strArr){
+    //if lower case 97 to 122
+    if (str.charCodeAt(index) >= 97 && str.charCodeAt(index) <= 122) {
+      strArr[index] = strArr[index].toUpperCase()
+    } else if (str.charCodeAt(index) >= 65 && str.charCodeAt(index) <= 90) {
+      strArr[index] = strArr[index].toLowerCase()
+    }
+  }
+  console.log(strArr.join('').split(' ').reverse().join(' '))
+  return strArr.join('').split(' ').reverse().join(' ')
+}
 
+
+//a 97, z 122, A 65, Z 90
+//we are given a string, str
+//string will have some uppercase and lowercase letters
+//take the string, change any uppercase letters to lowercase and viceversa
+
+//next, words should be reversed.
+
+//Hello Bob >> bOB hELLO
+
+//loop through string
+//check charCodeAt each letter, if greater than lowercase bound
+//change to upper, else change to lower
+
+
+/*
 //Array combinations
 function solve(arr) {
   
