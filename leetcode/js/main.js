@@ -1,5 +1,42 @@
 //leetcode
 
+//Top K Frequent Words
+/**
+ * @param {string[]} words
+ * @param {number} k
+ * @return {string[]}
+ */
+ var topKFrequent = function(words, k) {
+    
+    let wordFreqMap = new Map()
+    
+    words.map((word) => {
+        //if word does not exist in wordFreqMap, add it and start at 1
+        if(wordFreqMap.has(word)) {
+            let newValue = wordFreqMap.get(word) + 1
+            wordFreqMap.set(word, newValue) 
+        } else {
+            //else increase by 1 ++
+            wordFreqMap.set(word,1)
+        }
+    })
+    //check map
+    
+    let mapArr = [...wordFreqMap.entries()] 
+    // console.log(mapArr)
+    mapArr.sort( (a,b)=> b[1] - a[1]  || a[0].localeCompare(b[0]) )
+    // console.log(mapArr.slice(0,k).map((entry)=>entry[0]))
+    return mapArr.slice(0,k).map((entry)=>entry[0])
+    
+};
+
+//given an array of words, some repeat
+//return the top k most frequent words, if tie, return by lex order
+//[hello, there, how, how, are, you, you, you]
+// return [you, how, are]
+
+// first let's create a map that keep track of word frequency
+/*
 //Bulls and Cows
 var getHint = function(secret, guess) {
   
