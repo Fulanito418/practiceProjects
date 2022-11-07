@@ -1,4 +1,16 @@
 //7Kyu
+
+//Lost number in number sequence
+function findDeletedNumber(arr, mixArr) {
+  let arrSum = arr.reduce( (acc, cur)=> acc + cur,0)
+  let mixSum = mixArr.reduce( (acc,cur)=> acc + cur,0)
+  return arrSum - mixSum
+}
+  
+  //sum of the values of arr
+  //sum the values of mixArr
+  //then find the difference
+/*
 //Nth Smallest Element (Array Series #4)
 function nthSmallest(arr, pos){
  
