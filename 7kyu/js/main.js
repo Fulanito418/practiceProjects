@@ -1,5 +1,11 @@
 //7Kyu
 
+//Binary Addition
+function addBinary(a,b) {
+  return (a + b).toString(2)
+}
+
+/*
 //Lost number in number sequence
 function findDeletedNumber(arr, mixArr) {
   let arrSum = arr.reduce( (acc, cur)=> acc + cur,0)

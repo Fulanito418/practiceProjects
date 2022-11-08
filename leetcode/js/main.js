@@ -1,5 +1,34 @@
 //leetcode
 
+
+
+
+
+/*
+
+//Let's say you're given a 2D Array of words and their frequency 
+
+let inventory = [ "glove", "bat", "ball", "glove", "bat", "ball", "glove", "bat" ]
+
+
+
+let wordFreq = [ [ 'ai', 2 ], [ 'love', 2 ], [ 'leetcode', 1 ], [ 'coding', 2 ] ]
+
+
+
+//You can sort the words by their frequency
+wordFreq.sort( (a,b) => b[1] - a[1] )
+// Result 
+[ [ 'ai', 2 ], [ 'love', 2 ], [ 'coding', 2 ], [ 'leetcode', 1 ] ]
+
+//But what if you wanted to sort by frequency AND alphabetical order?
+wordFreq.sort( (a,b) => b[1] - a[1]  || a[0].localeCompare(b[0]) )
+// Result
+[ [ 'ai', 2 ], [ 'coding', 2 ], [ 'love', 2 ], [ 'leetcode', 1 ] ]
+
+
+
+
 //Top K Frequent Words
 /**
  * @param {string[]} words
