@@ -1,5 +1,54 @@
 //DSA
 
+
+//2dArrayDS
+
+function hourglassSum(arr) {
+  let returnSum = -Infinity
+  let currentSum = 0
+  
+  for(let r = 0; r <=3; r++){
+      for(let c = 0; c<=3; c++){
+          currentSum = arr[r][c] + arr[r][c+1] + arr[r][c+2] + arr[r+1][c+1] + arr[r+2][c] + arr[r+2][c+1] + arr[r+2][c+2]
+          console.log(currentSum + 'currentSum')
+          returnSum = Math.max(returnSum, currentSum )
+          console.log(returnSum)
+      }
+  } 
+  return returnSum
+}
+
+
+// [
+//   [ 1, 1, 1, 0, 0, 0 ],
+//   [ 0, 1, 0, 0, 0, 0 ],
+//   [ 1, 1, 1, 0, 0, 0 ],
+//   [ 0, 0, 2, 4, 4, 0 ],
+//   [ 0, 0, 0, 2, 0, 0 ],
+//   [ 0, 0, 1, 2, 4, 0 ]
+// ]
+
+//return the highest sum of an hourglass
+
+// [0][0]  [0][1]  [0][2]
+//         [1][1]
+// [2][0]  [2][1]  [2][2]
+
+// row = 0 and column = 0
+// [r][c]  [r][c+1]  [r][c+2]
+//         [r+1][c+1]
+// [r+2][c][r+2][c+1][r+2][c+2]
+
+//sum of 7
+// arr[r][c] + arr[r][c+1] + arr[r][c+2] + arr[r+1][c+1] + arr[r+2][c] + arr[r+2][c+1] + arr[r+2][c+2]
+
+
+//continue looping until you reach the end
+//meaning row is 3 and column is 3
+
+
+
+/*
 // You will be given an array of numbers in which two numbers occur once and the rest occur only twice. Your task will be to return the sum of the numbers that occur only once.
 
 // For example, repeats([4,5,7,5,4,8]) = 15 because only the numbers 7 and 8 occur once, and their sum is 15. Every other number occurs twice.
