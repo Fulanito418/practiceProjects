@@ -1,6 +1,31 @@
 //DSA
 
+//Plus Minus
+function plusMinus(arr) {
+  let arrLength = arr.length
+  let [posCount, zeroCount, negCount] = [0,0,0]
+  
+  arr.forEach(num=> {
+      if( num === 0 ){
+          zeroCount++
+      } else if(num>0) {
+          posCount++
+      } else {
+          negCount++
+      }
+  })
+  
+  console.log((posCount/arrLength).toFixed(6))
+  console.log((negCount/arrLength).toFixed(6))
+  console.log((zeroCount/arrLength).toFixed(6))
+}
 
+//first take length of arr
+//loop through arr
+//keep track of positives, 0, negatives
+//print pos, negatives and 0s ratio up to 6 decimal places
+
+/*
 //2dArrayDS
 
 function hourglassSum(arr) {
