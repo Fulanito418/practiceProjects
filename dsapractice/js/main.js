@@ -1,6 +1,49 @@
 //DSA
+//Time Conversion
+function timeConversion(s) {
+  let amTime = s.includes('A')
+  let pmTime = s.includes('P')
+  
+  // console.log('amtime '+amTime, 'pmtime '+pmTime)
 
+  let sArr = s.split(':')
+  // console.log(sArr)
+  //handle 12
+  if(Number(sArr[0]) === 12 && amTime){
+      sArr[0] = '00'        
+  }
+  if(Number(sArr[0]) != 12 && pmTime){
+      sArr[0] = String(Number(sArr[0]) + 12)   
+  }
+  console.log('hello')
+  return sArr.join(':').slice(0,8)
+  
+  
+}
 
+// check if am or pm
+//keep in variable
+
+//split string by :
+// check [0] == 12
+// check if 12 
+// YES? if AM, set to 00
+// NO? leave as 12
+// join by :
+// then slice (0, 8) and return 
+
+// Not 12?
+// check am? 
+// Yes? keep time
+// No? pm >> add 12
+
+// 12:01:00AM >> 00:01:00
+// 03:01:00AM >> 03:01:00
+// 11:01:00AM >> 11:01:00
+// 12:01:00PM >> 12:01:00
+// 01:01:00PM >> 13:01:00
+// 11:01:00PM >> 23:01:00
+/*
 //Mini-Max Sum
 function miniMaxSum(arr) {
   // Write your code here
