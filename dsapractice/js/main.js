@@ -1,5 +1,33 @@
 //DSA
 
+
+//Mini-Max Sum
+function miniMaxSum(arr) {
+  // Write your code here
+  let arrLen = arr.length
+  if (arr.length<=4){
+      let sum = arr.reduce((acc,cur)=> acc + cur,0)
+      console.log(`${sum} ${sum}`)
+  } else {
+      arr.sort((a,b)=>a-b)
+      let minSum = arr.slice(0,4).reduce((acc,cur)=> acc + cur,0)
+      let maxSum = arr.slice(arrLen-4).reduce((acc,cur)=> acc + cur,0)
+      console.log(`${minSum} ${maxSum}`)
+  }
+
+}
+
+//given an array of nums
+//return space separated two integers
+
+//if arr is 4 or less, reduce and print them
+
+// if not, sort, slice and reduce first 4,
+//slice and reduce last 4
+//print
+
+
+/*
 //Plus Minus
 function plusMinus(arr) {
   let arrLength = arr.length
