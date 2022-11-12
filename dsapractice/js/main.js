@@ -1,4 +1,11 @@
 //DSA
+//findMedian
+function findMedian(arr) {
+  //sort
+  arr.sort((a,b)=>a-b)
+  return arr[Math.floor(arr.length/2)]
+  }
+/*
 //Time Conversion
 function timeConversion(s) {
   let amTime = s.includes('A')
