@@ -1,5 +1,36 @@
 //DSA
 
+
+//diagonalDifference
+function diagonalDifference(arr) {
+  let primaryDiagonal = 0 
+ let secondaryDiagonal = 0
+ 
+ for (let row = 0; row < arr.length; row++) {
+     primaryDiagonal += arr[row][row]
+     secondaryDiagonal += arr[row][arr.length-(row+1)]
+ }
+ 
+ return Math.abs(primaryDiagonal-secondaryDiagonal)
+
+
+// }
+//            arr[row][col]
+// [1,2,3] >> arr[0][0] [row][col]
+// [4,5,6] >> arr[1][1]
+// [7,8,9] >> arr[2][2]
+
+// [1,2,3] >> arr[0][arr.length-(row+1)]
+// [4,5,6] >> arr[1][arr.length-(row+1)]
+// [7,8,9] >> arr[2][arr.length-(row+1)]
+
+// given a square matrix array of i x j
+//return the absolute difference of the sume of the diagonals
+
+
+
+}
+/*
 //countingSort
 function countingSort(arr) {
     
