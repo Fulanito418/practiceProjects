@@ -1,5 +1,32 @@
 //DSA
 
+//countingSort
+function countingSort(arr) {
+    
+  let freqArr = new Array(100).fill(0)
+
+
+  for (let i = 0; i < arr.length; i++) {
+      freqArr[ arr[i] ]++ 
+  }
+  
+  return freqArr
+}
+
+//given an array of numbers
+//return a frequency array, where each values' index represents how many times that index appears in the input arr
+
+//[1,1,3,2,1]
+//return [0, 3, 1, 1]
+
+//create freqArr = new Array(100)
+//loop through input arr
+// go in freqArr[ input[i] ] = freqArr[ input[i] ] + 1
+
+//return freqArr
+
+
+/*
 //lonelyinteger
 function lonelyinteger(a) {
     
