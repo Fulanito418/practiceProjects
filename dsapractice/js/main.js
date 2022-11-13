@@ -1,4 +1,52 @@
 //DSA
+
+//lonelyinteger
+function lonelyinteger(a) {
+    
+  a.sort( (a,b) => a - b)
+  if(a[0]!=a[1]) {
+      return a[0]
+  }
+  if(a[a.length-2]!=a[a.length-1]){
+      return a[a.length-1]
+  }
+  
+  
+  for(let i = 0; i < a.length - 2; i++){
+      let j = i+1
+   if(a[i] != a[j] && a[i+1] != a[j+1]) {
+       return a[i+1]
+   } 
+   }
+          
+  
+}
+
+//given an array of integers, they all repeat except for 1
+//return the integer that appears once
+
+//[3,4,5,3,4]
+//we can sort the array first
+
+//[3,3,4,5,3,5] >> [3,3,3,4,5,5]
+                      //   ^ ^
+                      //   i j 
+//[3,4,5,3,4] >> [3,3,4,4,5]
+                  //  ^ ^
+                  //  i j  
+//use two pointers i,j
+//if i and j are equal, have them move up one space
+//if i and j are not equal, move up one, if they are still not equal, return i
+
+//while loop
+//for loop i < arr.length - 2
+//if i === j,
+//if i != j && and i+1 != j+1
+//return i+1
+
+//nothing returns from that, return last element in arr 
+
+/*
 //findMedian
 function findMedian(arr) {
   //sort
