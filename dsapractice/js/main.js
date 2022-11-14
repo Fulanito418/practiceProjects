@@ -1,6 +1,36 @@
 //DSA
+//Flipping the Matrix
 
+function flippingMatrix(matrix) {
+  let mlength = matrix.length
+  let maxSum = 0
+  let currentMax = -Infinity
+  
+  for (let r = 0; r < mlength/2; r++) {
+      for (let c = 0; c < mlength/2; c++) {
+          
+          let subValue = [
+              matrix[r][c],
+              matrix[r][mlength-1-c],
+              matrix[mlength-1-r][c],
+              matrix[mlength-1-r][mlength-1-c]
+          ]
+          currentMax = Math.max(...subValue)
+          maxSum+=currentMax
+      }
+  }
+  return maxSum
 
+}
+
+//given a matrix
+//return max sum possible that can be created in the top left quartile of input
+
+//double loop r and c
+//both start at 0
+//take max of the 4 possible mirror images of each input
+
+/*
 //diagonalDifference
 function diagonalDifference(arr) {
   let primaryDiagonal = 0 
