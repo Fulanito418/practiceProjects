@@ -1,5 +1,39 @@
 //7Kyu
 
+//Sum of odd numbers
+function rowSumOddNumbers(n) {
+	
+  let sum = 0 
+  for (let i = 0; i < n; i++) {
+    sum += 2 * i
+  }
+  
+  let firstValue = 1 + sum
+  
+  
+//   for(let j = 1; j < n; j++) {
+//     firstValue += 21 + (2*j)
+//   }
+  return firstValue*n+sum
+  
+}
+
+//n is the input
+//return integer sum
+//n = 4
+//loop
+//sum =0
+//for i, i< n, n++
+//sum += 2 * i
+//add that to 1 to get first number on row
+//then return sum =
+//return sum = 1 + 20
+//21 + 21+2 + 21+2+2
+//2 
+// 2 2 
+// 2 2 2 
+// 2 2 2 2 
+/*
 //Binary Addition
 function addBinary(a,b) {
   return (a + b).toString(2)
