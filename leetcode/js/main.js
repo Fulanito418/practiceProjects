@@ -1,7 +1,26 @@
 //leetcode
 
 
+Two Sum
+var twoSum = function(nums, target) {
 
+    numsLength = nums.length;
+    console.log(numsLength);
+
+    for (let baseIndex = 0; baseIndex < numsLength - 1; baseIndex++) {
+        for (let nextIndex = baseIndex + 1; nextIndex < numsLength; nextIndex ++) {
+            let firstAddend = nums[baseIndex];
+            let secondAddend = nums[nextIndex];
+            console.log(firstAddend, secondAddend, baseIndex, nextIndex);
+            let sum = firstAddend + secondAddend
+            if (sum === target) {
+                return [baseIndex, nextIndex]
+            };
+            
+        }
+    }
+    
+};
 
 
 /*
