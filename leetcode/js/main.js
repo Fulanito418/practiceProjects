@@ -2,6 +2,23 @@
 
 
 Two Sum
+
+var twoSum = function(nums, target) {
+    for (let index = 0; index < nums.length; index ++) {
+
+        let curNum = nums[index];
+        let difference = target - curNum;
+        let differenceExists = nums.includes(difference);
+        
+        if (differenceExists) {
+            let pairIndex = nums.lastIndexOf(difference);
+            if (index !== pairIndex) {
+                return [index, pairIndex];
+            }
+        }   
+    }
+};
+
 var twoSum = function(nums, target) {
 
     numsLength = nums.length;
