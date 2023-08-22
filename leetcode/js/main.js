@@ -1,5 +1,59 @@
 //leetcode
 
+Valid Parentheses
+var isValid = function(s) {
+
+
+  let myArr = [];
+  let openingChars = ["(", "{", "["];
+  
+  let myObj = {
+    ")":"(",
+    "}":"{",
+    "]":"["
+  }
+
+  for (let i = 0; i < s.length; i++ ) {
+      // console.log(s[i]);
+      let currChar = s[i];
+      if (s.length < 2 || !openingChars.includes(s[0])) {
+        return false
+      } else if (openingChars.includes(currChar)) {
+        myArr.push(currChar);
+      } else if (myArr.length === 0) {
+        return false
+      } else if ( myArr.pop() !== myObj[currChar]) {
+        return false
+      }
+  }  
+  console.log(myArr);
+  const outcome =  myArr.length === 0 ? true : false;
+  return outcome;
+  
+  // if (myArr.length !== 0 ) {
+  //   return false
+  // }
+  // return true;
+
+
+};
+
+// object with 
+// ")":"("
+// "}":"{"
+// "]":"["
+
+// if opening string
+//  (, {, [
+// push to array
+
+//     if not, check if the last one in the array in it's opening pair
+// if it is, pop it off
+
+// check array in the end,
+
+// if length is 0, return true else false
+
 
 Two Sum
 
