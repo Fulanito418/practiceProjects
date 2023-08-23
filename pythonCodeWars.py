@@ -1,3 +1,9 @@
+Parse nice int from char problem
+def get_age(age):
+    print(age[0])
+    ageNumber = age[0]
+    return int(ageNumber);
+    
 Multiply
 def multiply(a, b):
     return a * b
