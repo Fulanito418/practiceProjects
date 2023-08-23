@@ -1,3 +1,11 @@
+The Wide-Mouthed frog!
+def mouth_size(animal): 
+    lowerCaseAnimal = animal.lower();
+    if lowerCaseAnimal == "alligator":
+        return "small"
+    else:
+        return "wide"
+        
 Parse nice int from char problem
 def get_age(age):
     print(age[0])
