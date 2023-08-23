@@ -1,3 +1,7 @@
+5 without numbers !!
+def unusual_five():
+    return len("fivee");
+    
 The Wide-Mouthed frog!
 def mouth_size(animal): 
     lowerCaseAnimal = animal.lower();
