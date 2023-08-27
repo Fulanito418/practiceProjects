@@ -1,5 +1,30 @@
 //leetcode
 
+Valid Palindrome
+
+var isPalindrome = function(s) {
+    
+    let alphaNum = "abcdefghijklmnopqrstuvwxyz1234567890";
+    let lowerStr = s.toLowerCase();
+    
+    let strArr = lowerStr.split('');
+    let newArr = [];
+    
+    for (let x = 0; x < strArr.length; x++) {
+        let currChar = strArr[x]
+        if ( alphaNum.includes(currChar) ) {
+            newArr.push(currChar);
+        }
+    }
+    
+    
+    let strFlat = newArr.join('');
+    let strFlatReverse = newArr.reverse().join('');
+    
+    return (strFlat === strFlatReverse);
+};
+
+
 Best Time to Buy and Sell Stock
 var maxProfit = function(prices) {
 
