@@ -1,5 +1,30 @@
 //leetcode
 
+Best Time to Buy and Sell Stock
+var maxProfit = function(prices) {
+
+
+    if (prices.length < 2) {
+        return 0
+    }
+
+    let lowestBuy = prices[0];
+    let highestSell = prices[0];
+    let bestProfit = highestSell - lowestBuy;
+
+    for (let x = 1; x < prices.length; x++) {
+        let currPrice = prices[x]
+        if (currPrice < lowestBuy) {
+            lowestBuy = currPrice
+        } else if (currPrice - lowestBuy > bestProfit){
+            bestProfit = currPrice - lowestBuy
+        }
+    }
+    return bestProfit
+};
+
+
+
 Valid Parentheses
 var isValid = function(s) {
 
