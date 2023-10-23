@@ -1,3 +1,75 @@
+let matrixTest = [
+  [1, 2, 3],
+  [8, 9, 4],
+  [7, 6, 5],
+];
+// let matrixTest = [
+//   [1, 2, 3, 4, 5],
+//   [12, 13, 14, 15, 6],
+//   [11, 10, 9, 8, 7],
+// ];
+function swirl(matrix) {
+  let up = 0; //row 0
+  let left = 0; //col 0
+  let right = matrix[0].length - 1; //last col
+  let down = matrix.length - 1; // last row
+
+  let numsArr = [];
+  let matrixSize = matrix[0].length * matrix.length;
+
+  //col = 1
+  //col < = 2
+  //&& 12 >= 10
+  while (numsArr.length < matrixSize) {
+    // step to the right ++
+    for (let col = left; col <= right && matrixSize > numsArr.length; col++) {
+      //start at row 0 (up)
+      //step through cols, starting at (left)
+      console.log(matrix[up][col]);
+      numsArr.push(matrix[up][col]);
+    }
+    //we took care of the top row (0) so add 1
+    up++;
+
+    //step down ++
+    for (let row = up; row <= down && matrixSize > numsArr.length; row++) {
+      //col locked at (right)
+      //row changes, starts at up
+      console.log(matrix[row][right]);
+      numsArr.push(matrix[row][right]);
+    }
+    //we took care of right side so -1
+    right--;
+
+    //step left--
+    for (let col = right; col >= left && numsArr.length < matrixSize; col--) {
+      // row is locked at bottom (down)
+      //col moves decreases
+      console.log(matrix[down][col]);
+      numsArr.push(matrix[down][col]);
+    }
+    //we took care of bottom so down -1
+    down--;
+
+    //step up--
+    for (let row = down; row >= up && matrixSize > numsArr.length; row--) {
+      //lock the col to the (left)
+      //rows move towards 0 start at (down)
+      console.log(matrix[row][left]);
+      numsArr.push(matrix[row][left]);
+    }
+    //we took care of left col so +1
+    left++;
+  }
+
+  console.log(up, down, left, right);
+
+  console.log(numsArr);
+}
+
+swirl(matrixTest);
+
+
 //DSA
 /*
 You are reading a Build Your Own Story book. It is like a normal book except that choices on some pages affect the story, sending you to one of two options for your next page.
