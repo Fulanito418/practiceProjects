@@ -1,3 +1,223 @@
+
+"use strict";
+
+/*
+You are a developer for a university. Your current project is to develop a system for students to find courses they share with friends. The university has a system for querying courses students are enrolled in, returned as a list of (ID, course) pairs.
+
+Write a function that takes in a collection of (student ID number, course name) pairs and returns, for every pair of students, a collection of all courses they share.
+
+
+Sample Input:
+
+enrollments1 = [
+  ["58", "Linear Algebra"],
+  ["94", "Art History"],
+  ["94", "Operating Systems"],
+  ["17", "Software Design"],
+  ["58", "Mechanics"],
+  ["58", "Economics"],
+  ["17", "Linear Algebra"],
+  ["17", "Political Science"],
+  ["94", "Economics"],
+  ["25", "Economics"],
+  ["58", "Software Design"],
+]
+
+Sample Output (pseudocode, in any order):
+
+find_pairs(enrollments1) =>
+{
+  "58,17": ["Software Design", "Linear Algebra"]
+  "58,94": ["Economics"]
+  "58,25": ["Economics"]
+  "94,25": ["Economics"]
+  "17,94": []
+  "17,25": []
+}
+
+
+
+Additional test cases:
+
+Sample Input:
+
+enrollments2 = [
+  ["0", "Advanced Mechanics"],
+  ["0", "Art History"],
+  ["1", "Course 1"],
+  ["1", "Course 2"],
+  ["2", "Computer Architecture"],
+  ["3", "Course 1"],
+  ["3", "Course 2"],
+  ["4", "Algorithms"]
+]
+
+
+
+Sample output:
+
+find_pairs(enrollments2) =>
+{
+  "1,0":[]
+  "2,0":[]
+  "2,1":[]
+  "3,0":[]
+  "3,1":["Course 1", "Course 2"]
+  "3,2":[]
+  "4,0":[]
+  "4,1":[]
+  "4,2":[]
+  "4,3":[]
+} 
+
+Sample Input:
+enrollments3 = [
+  ["23", "Software Design"], 
+  ["3", "Advanced Mechanics"], 
+  ["2", "Art History"], 
+  ["33", "Another"],
+]
+
+
+Sample output:
+
+find_pairs(enrollments3) =>
+{
+  "23,3": []
+  "23,2": []
+  "23,33":[]
+  "3,2":  []
+  "3,33": []
+  "2,33": []
+}
+
+All Test Cases:
+find_pairs(enrollments1)
+find_pairs(enrollments2)
+find_pairs(enrollments3)
+
+Complexity analysis variables:
+
+n: number of student,course pairs in the input
+s: number of students
+c: total number of courses being offered (note: The number of courses any student can take is bounded by a small constant)
+*/
+
+const enrollments1 = [
+  ["58", "Linear Algebra"],
+  ["94", "Art History"],
+  ["94", "Operating Systems"],
+  ["17", "Software Design"],
+  ["58", "Mechanics"],
+  ["58", "Economics"],
+  ["17", "Linear Algebra"],
+  ["17", "Political Science"],
+  ["94", "Economics"],
+  ["25", "Economics"],
+  ["58", "Software Design"]
+];
+
+const enrollments2 = [
+  ["0", "Advanced Mechanics"],
+  ["0", "Art History"],
+  ["1", "Course 1"],
+  ["1", "Course 2"],
+  ["2", "Computer Architecture"],
+  ["3", "Course 1"],
+  ["3", "Course 2"],
+  ["4", "Algorithms"]
+];
+
+const enrollments3 = [
+  ["23", "Software Design"], 
+  ["3",  "Advanced Mechanics"], 
+  ["2",  "Art History"], 
+  ["33", "Another"]
+];
+
+
+
+
+
+function find_pairs(enrollments) {
+  
+  
+  
+  const uniqueStudentIds = new Set();
+  const studentCourseObj = {};
+  
+  for (let data of enrollments){
+    let studentId = data[0];
+    uniqueStudentIds.add(studentId)
+  }
+  
+  const idArr = Array.from(uniqueStudentIds);
+  
+  
+  let studentPairsArr = [];
+  
+  for (let i = 0; i < idArr.length - 1; i++) {
+    for (let j = i+1; j < idArr.length; j++) {
+     let studentPairing = `${idArr[i]},${idArr[j]}`
+     let reversePair = studentPairing.split("").reverse().join("");
+     
+     
+      if (!studentPairsArr.includes(reversePair)){
+        if(idArr[i] != idArr[j]) {
+          studentPairsArr.push(studentPairing)  
+        }
+      }
+    }
+  }
+  
+  
+  const returnObj = {}
+  
+  for (let pair of studentPairsArr) {
+    returnObj[pair] = []
+  }
+  
+  console.log(studentPairsArr);
+  console.log(returnObj)
+  
+  
+  
+  // for (let id of uniqueStudentIds) {
+  //   console.log(id);
+  // }
+  
+}
+
+find_pairs(enrollments2);
+//Find a way to find all the possible pairings
+//Maybe use a SET to grab the unique IDs,
+//Then find all the pairs
+
+
+
+
+// [0,1,2]
+
+
+// loop through
+
+// 01
+// 02
+// 12
+
+
+
+//We need to look at the first student, see what class their taking
+//and check if their pair is also taking that course
+//if they are taking that course, then push it into the pair key value
+
+
+
+//If they don't have any courses in common, then empty array
+
+
+
+
 let matrixTest = [
   [1, 2, 3],
   [8, 9, 4],
