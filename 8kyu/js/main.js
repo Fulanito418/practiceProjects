@@ -1,5 +1,20 @@
 //8Kyu
 
+//Flick Switch
+function flickSwitch(arr){
+  let returnBoolean = true
+ let returnArr = []
+
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] === "flick") {
+      returnBoolean = !returnBoolean
+    }
+    returnArr.push(returnBoolean)
+  }
+  console.log(returnArr)
+  return returnArr
+}
+
 
 //Sort and Star
 function twoSort(s) {
