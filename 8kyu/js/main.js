@@ -1,5 +1,23 @@
 //8Kyu
 
+//A Letter's Best Friend
+export function bestFriend(txt: string, a: string, b: string): any {
+  
+  let strLen = txt.length;
+ 
+  let returnVal = true
+  console.log(strLen)
+  
+  for (let i = 0; i < strLen; i++) {
+    if (txt[i] === a && txt[i+1] !== b) {
+      returnVal = false
+    } 
+  }
+  
+  return returnVal
+  
+}
+
 //Neutralisation
 function neutralise(s1, s2) {
   
