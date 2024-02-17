@@ -1,5 +1,24 @@
 //8Kyu
 
+//Neutralisation
+function neutralise(s1, s2) {
+  
+  let returnString = "";
+  
+  for (let i = 0; i < s1.length; i++){
+    
+    if (s1[i] === s2[i]) {
+      returnString = returnString.concat(s1[i]);    
+    } else {
+      returnString = returnString.concat(0);  
+    }
+    
+  } 
+  console.log(returnString)
+  return returnString  
+
+}
+
 //Collinearity
 function collinearity( x1,y1, x2,y2 ) {
   
