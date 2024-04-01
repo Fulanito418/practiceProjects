@@ -1,6 +1,23 @@
 
 "use strict";
 
+All Wrong
+
+function getWrongAnswers(N, C) {
+  // Write your code here
+  
+  let returnString = ""
+  for (let letter of C) {
+    if (letter === "A") {
+      returnString += "B"
+    } else {
+      returnString += "A"
+    }
+  }
+  return returnString;
+}
+
+
 /*
 You are a developer for a university. Your current project is to develop a system for students to find courses they share with friends. The university has a system for querying courses students are enrolled in, returned as a list of (ID, course) pairs.
 
